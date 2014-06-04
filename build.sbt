@@ -5,9 +5,9 @@ uniformDependencySettings
 libraryDependencies :=
   depend.scaldingproject() ++
   depend.scalaz() ++
+  depend.shapeless() ++
   Seq(
-    "com.twitter"      %% "scalding-avro"      % depend.versions.scalding,
-    "com.chuusai"      %% "shapeless"          % "2.0.0-M1" cross CrossVersion.full
+    "com.twitter"      %% "scalding-avro"      % depend.versions.scalding
   )
 
 uniformAssemblySettings
