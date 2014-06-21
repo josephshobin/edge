@@ -1,7 +1,7 @@
 Edge
 ====
 
-[![Build Status](https://magnum.travis-ci.com/CommBank/edge.svg?token=A3xq7fpHLyey1yCrNASy&branch=master)](https://magnum.travis-ci.com/CommBank/edge)
+[![Build Status](https://travis-ci.org/CommBank/edge.svg?branch=master)](https://travis-ci.org/CommBank/edge)
 [![Gitter chat](https://badges.gitter.im/CommBank.png)](https://gitter.im/CommBank)
 
 This project contains a series of hdfs tools, taps, sinks, sources and alike
