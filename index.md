@@ -10,7 +10,7 @@ Hdfs tools, taps, sinks, sources and alike for use with cascading and scalding.
 
 
 * [Readme](https://github.com/CommBank/edge/)
-* [Scaladoc](/latest/api/index.html)
+* [Scaladoc](/edge/latest/api/index.html)
 
 The latest version is `{{ site.releaseVersion }}`.
 
