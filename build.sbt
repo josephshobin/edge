@@ -27,3 +27,31 @@ libraryDependencies :=
 uniformAssemblySettings
 
 publishArtifact in Test := true
+
+autoAPIMappings := true
+
+apiMappings ++= {
+  val cp: Seq[Attributed[File]] = (fullClasspath in Compile).value
+  def assignApiUrl(organization: String, name: String, link: String): Option[(File, URL)] = {
+    ( for {
+      entry <- cp
+      module <- entry.get(moduleID.key)
+      if module.organization == organization
+      if module.name.startsWith(name)
+      jarFile = entry.data
+    } yield jarFile
+    ).headOption.map(_ -> url(link))
+  }
+  List(
+    assignApiUrl("cascading", "cascading-core", "http://docs.cascading.org/cascading/2.5/javadoc"),
+    assignApiUrl("cascading", "cascading-hadoop", "http://docs.cascading.org/cascading/2.5/javadoc"),
+    assignApiUrl("cascading", "cascading-local", "http://docs.cascading.org/cascading/2.5/javadoc"),
+    assignApiUrl("com.twitter", "scalding-core", "http://twitter.github.io/scalding/")
+  ).flatten.toMap
+}
+
+site.settings ++ Seq(includeFilter in SiteKeys.makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.md" | "*.yml")
+
+
+
+site.includeScaladoc()

@@ -1,6 +1,7 @@
 language: scala
 jdk:
 - oraclejdk7
+sudo: false
 cache:
   directories:
   - $HOME/.ivy2
@@ -11,9 +12,13 @@ install:
 - ci/sbt-setup.sh
 script:
 - sbt -Dsbt.global.base=$TRAVIS_BUILD_DIR/ci '; test; package'
-after_script:
+after_success:
 - ci/sbt-deploy.sh
+- chmod ugo+x gh-pages.sh
+- ./gh-pages.sh
+after_script:
 - rm -rf ci
 env:
   global:
-    secure: gHrUE4JzoKxV0NATdhPH9jDHfU/eeoEYD/+J9v4rRbw0yz43/VXo2OAEqT/e5Nsf7NXQgu90au/XK87rolmPEZEOXfOEGZN+MqO6YAl7Ht8DDMZWkpx6pq18K/qsiPMbSRlVWI+69PnwgfXF4z8DcO5onPE0IfchCZ9TKgYqIG4=
+  - secure: gHrUE4JzoKxV0NATdhPH9jDHfU/eeoEYD/+J9v4rRbw0yz43/VXo2OAEqT/e5Nsf7NXQgu90au/XK87rolmPEZEOXfOEGZN+MqO6YAl7Ht8DDMZWkpx6pq18K/qsiPMbSRlVWI+69PnwgfXF4z8DcO5onPE0IfchCZ9TKgYqIG4=
+  - secure: MmXQf2QO2MaP9JJF3UGpW74aVU4A+PLQDMgsdaux8WshdZ+CsI3PIpi3xzIlPESYGYZTWMdcl9aMgaWLWipcq0bhcm1om1u/r1gFcfRhLHVQPTNE1T3kCuk8FFCydG5f4FzUqTby5qMaXFiGsVSKgmdGBF60G+ET1nTP0K+3Swk=
