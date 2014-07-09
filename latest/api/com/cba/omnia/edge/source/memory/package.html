@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>memory - com.cba.omnia.edge.source.memory</title>
+          <meta name="description" content="memory - com.cba.omnia.edge.source.memory" />
+          <meta name="keywords" content="memory com.cba.omnia.edge.source.memory" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.cba.omnia.edge.source.memory.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a></p>
+        <h1>memory</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">memory</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.cba.omnia.edge.source.memory.DistributableIterableSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableIterableSource[T]extendsSourcewithMappable[T]withProductwithSerializable"></a>
+      <a id="DistributableIterableSource[T]:DistributableIterableSource[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableIterableSource.html"><span class="name">DistributableIterableSource</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="iter">iter: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>]</span>, <span name="mappers">mappers: <span class="extype" name="scala.Int">Int</span></span>, <span name="inFields">inFields: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a> = <span class="symbol">cascading.tuple.Fields.NONE</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="set">set: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>]</span>, <span name="conv">conv: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>]</span>)</span><span class="result"> extends <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Source" class="extype" target="_top">Source</a> with <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mappable" class="extype" target="_top">Mappable</a>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is an implementation of an iterable backed scalding source.</p>
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemoryInputFormatextendsTupleMemoryInputFormat"></a>
+      <a id="DistributableMemoryInputFormat:DistributableMemoryInputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemoryInputFormat.html"><span class="name">DistributableMemoryInputFormat</span></a><span class="result"> extends <span class="extype" name="com.twitter.maple.tap.TupleMemoryInputFormat">TupleMemoryInputFormat</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputSplit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemoryInputSplitextendsInputSplit"></a>
+      <a id="DistributableMemoryInputSplit:DistributableMemoryInputSplit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemoryInputSplit.html"><span class="name">DistributableMemoryInputSplit</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapred.InputSplit">InputSplit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemoryRecordReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemoryRecordReaderextendsTupleMemoryInputFormat.TupleRecordReader"></a>
+      <a id="DistributableMemoryRecordReader:DistributableMemoryRecordReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemoryRecordReader.html"><span class="name">DistributableMemoryRecordReader</span></a><span class="result"> extends <span class="extype" name="com.twitter.maple.tap.TupleMemoryInputFormat.TupleRecordReader">TupleRecordReader</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemorySourceScheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemorySourceSchemeextendsMemorySourceTap.MemorySourceScheme"></a>
+      <a id="DistributableMemorySourceScheme:DistributableMemorySourceScheme"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemorySourceScheme.html"><span class="name">DistributableMemorySourceScheme</span></a><span class="result"> extends <span class="extype" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">MemorySourceScheme</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemorySourceTap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemorySourceTapextendsSourceTap[org.apache.hadoop.mapred.JobConf,org.apache.hadoop.mapred.RecordReader[com.twitter.maple.tap.TupleWrapper,org.apache.hadoop.io.NullWritable]]withSerializable"></a>
+      <a id="DistributableMemorySourceTap:DistributableMemorySourceTap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemorySourceTap.html"><span class="name">DistributableMemorySourceTap</span></a><span class="result"> extends <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.SourceTap" class="extype" target="_top">SourceTap</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is an implementation of an in memory source tap that can be
+configurated to distribute explicitly on <code>mappers</code> number of mappers.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemoryInputFormat"></a>
+      <a id="DistributableMemoryInputFormat:DistributableMemoryInputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemoryInputFormat$.html"><span class="name">DistributableMemoryInputFormat</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemorySourceScheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributableMemorySourceScheme"></a>
+      <a id="DistributableMemorySourceScheme:DistributableMemorySourceScheme"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributableMemorySourceScheme$.html"><span class="name">DistributableMemorySourceScheme</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+    </body>
+      </html>
