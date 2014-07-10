@@ -28,12 +28,12 @@ import com.cba.omnia.edge.hdfs.HdfsString._
 import com.cba.omnia.edge.test.ScaldingSpec
 
 
-class PartitionTextLineSpec extends ScaldingSpec { def is =s2"""
+class PartitionedTextLineSpec extends ScaldingSpec { def is =s2"""
 
-PartitionTextLine
+PartitionedTextLine
 =================
 
-  can write using PartitionTextLine $write
+  can write using PartitionedTextLine $write
 """
 
   type KV = (Int, String)
@@ -47,7 +47,7 @@ PartitionTextLine
 
   def write =  new JobSpec {
     IterablePipe(data, flowDef, mode)
-      .write(PartitionTextLine[Int](testid, "%s"))
+      .write(PartitionedTextLine[Int](testid, "%s"))
   } must runWith {
     val groups = data.groupBy({ case (k, v) => k })
 

@@ -53,11 +53,11 @@ import com.twitter.scalding.{TextLine => _, _}
   * @param template Template for the partitioned path
   * @param encoding Text encoding of the file content
   */
-case class PartitionTextLine[P](
+case class PartitionedTextLine[P](
   path: String, template: String, encoding: String = TextLine.DEFAULT_CHARSET
 ) (implicit
-  m: Manifest[P], valueSetter: TupleSetter[String], valueConverter: TupleConverter[(Long, String)],
-  partitionSetter: TupleSetter[P], partitionConverter: TupleConverter[P]
+  val valueSetter: TupleSetter[String], val valueConverter: TupleConverter[(Long, String)],
+  val partitionSetter: TupleSetter[P], val partitionConverter: TupleConverter[P]
   ) extends SchemedSource with TypedSink[(P, String)] with Mappable[(P, (Long, String))]
     with java.io.Serializable {
 
@@ -90,7 +90,7 @@ case class PartitionTextLine[P](
    though it is the incorrect sink fields, otherwise scalding validation falls over, see hdfsScheme
    for other part of tweak to narrow fields back to value again to work around this.
    */
-  override def sinkFields : Fields =
+  override def sinkFields: Fields =
     PartitionUtil.toFields(0, valueSetter.arity + partitionSetter.arity)
 
   /** Creates the taps for local and hdfs mode.*/
