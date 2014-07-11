@@ -27,3 +27,7 @@ libraryDependencies :=
 uniformAssemblySettings
 
 publishArtifact in Test := true
+
+uniform.docSettings("https://github.com/CommBank/edge")
+
+uniform.ghsettings

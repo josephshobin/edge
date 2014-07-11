@@ -11,9 +11,8 @@ install:
 - chmod ugo+x ci/*
 - ci/sbt-setup.sh
 script:
-- sbt -Dsbt.global.base=$TRAVIS_BUILD_DIR/ci '; test; package'
+- sbt -Dsbt.global.base=$TRAVIS_BUILD_DIR/ci '; test; package' && ci/sbt-deploy.sh && ci/gh-pages.sh
 after_script:
-- ci/sbt-deploy.sh
 - rm -rf ci
 env:
   global:

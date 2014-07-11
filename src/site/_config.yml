@@ -1,0 +1,3 @@
+name: edge
+exclude: [Gemfile]
+markdown: kramdown
