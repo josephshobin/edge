@@ -1,3 +1,0 @@
-name: edge
-exclude: [Gemfile]
-releaseVersion: 2.1.0-20140709071450-dbbf910

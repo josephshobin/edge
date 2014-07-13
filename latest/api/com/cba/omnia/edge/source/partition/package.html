@@ -58,16 +58,55 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.cba.omnia.edge.source.partition.PartitionTextLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PartitionTextLine[P]extendsSchemedSourcewithcom.twitter.scalding.TypedSink[(P,String)]withMappable[(P,(Long,String))]withSerializablewithProductwithSerializable"></a>
-      <a id="PartitionTextLine[P]:PartitionTextLine[P]"></a>
+              <ol><li name="com.cba.omnia.edge.source.partition.PartitionSchemed" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PartitionSchemed[P,T]extendsSchemedSourcewithcom.twitter.scalding.TypedSink[(P,T)]withMappable[(P,T)]"></a>
+      <a id="PartitionSchemed[P,T]:PartitionSchemed[P,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionSchemed.html"><span class="name">PartitionSchemed</span></a><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span> with <span class="extype" name="com.twitter.scalding.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.T">T</span>)] with <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.T">T</span>)]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait to assist with creating partitioned sources.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimited" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PartitionedDelimitedextendsSerializable"></a>
+      <a id="PartitionedDelimited:PartitionedDelimited"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedDelimited.html"><span class="name">PartitionedDelimited</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait to assist with creating objects such as <a href="PartitionedTsv$.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTsv">PartitionedTsv</a> to read from separated files.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedDelimitedSource[P,T]extendsSchemedSourcewithPartitionSchemed[P,T]withSerializablewithProductwithSerializable"></a>
+      <a id="PartitionedDelimitedSource[P,T]:PartitionedDelimitedSource[P,T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="PartitionTextLine.html"><span class="name">PartitionTextLine</span></a><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="valueSetter">valueSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>)</span><span class="result"> extends <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a> with <span class="extype" name="com.twitter.scalding.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)] with <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mappable" class="extype" target="_top">Mappable</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="PartitionedDelimitedSource.html"><span class="name">PartitionedDelimitedSource</span></a><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="separator">separator: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="skipHeader">skipHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="writeHeader">writeHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="quote">quote: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;\&quot;&quot;</span></span>, <span name="strict">strict: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="safe">safe: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mt">mt: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>)</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span> with <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Scalding source to read or write partitioned delimited text.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedTextLine[P]extendsSchemedSourcewithcom.twitter.scalding.TypedSink[(P,String)]withMappable[(P,(Long,String))]withSerializablewithProductwithSerializable"></a>
+      <a id="PartitionedTextLine[P]:PartitionedTextLine[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedTextLine.html"><span class="name">PartitionedTextLine</span></a><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>)</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span> with <span class="extype" name="com.twitter.scalding.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)] with <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Scalding source to read or write partitioned text.</p>
@@ -80,7 +119,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TemplatePartition.html"><span class="name">TemplatePartition</span></a><span class="params">(<span name="partitionFields">partitionFields: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.partition.Partition" class="extype" target="_top">Partition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="TemplatePartition.html"><span class="name">TemplatePartition</span></a><span class="params">(<span name="partitionFields">partitionFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="cascading.tap.partition.Partition">Partition</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Creates a partition using the given template string.</p>
@@ -104,6 +143,58 @@
       </span>
       </h4>
       <p class="comment cmt">Utility functions to assist with creating partitioned sourced.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedCsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedCsv"></a>
+      <a id="PartitionedCsv:PartitionedCsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedCsv$.html"><span class="name">PartitionedCsv</span></a><span class="result"> extends <a href="PartitionedDelimited.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimited">PartitionedDelimited</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Partitioned typed commma separated source.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedOsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedOsv"></a>
+      <a id="PartitionedOsv:PartitionedOsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedOsv$.html"><span class="name">PartitionedOsv</span></a><span class="result"> extends <a href="PartitionedDelimited.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimited">PartitionedDelimited</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Partitioned typed <code>\1</code> separated source (commonly used by Pig).</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedPsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedPsv"></a>
+      <a id="PartitionedPsv:PartitionedPsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedPsv$.html"><span class="name">PartitionedPsv</span></a><span class="result"> extends <a href="PartitionedDelimited.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimited">PartitionedDelimited</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Partitioned typed pipe separated source.</p>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionedTsv"></a>
+      <a id="PartitionedTsv:PartitionedTsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionedTsv$.html"><span class="name">PartitionedTsv</span></a><span class="result"> extends <a href="PartitionedDelimited.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimited">PartitionedDelimited</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Partitioned typed tab separated source.</p>
     </li></ol>
             </div>
 

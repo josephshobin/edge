@@ -35,14 +35,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TemplatePartition</span><span class="params">(<span name="partitionFields">partitionFields: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.partition.Partition" class="extype" target="_top">Partition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">TemplatePartition</span><span class="params">(<span name="partitionFields">partitionFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="cascading.tap.partition.Partition">Partition</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Creates a partition using the given template string.</p><p>The template string needs to have %s as placeholder for a given field.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/partition/TemplatePartition.scala" target="_blank">TemplatePartition.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.partition.Partition" class="extype" target="_top">Partition</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="cascading.tap.partition.Partition">Partition</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -89,7 +89,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TemplatePartition</span><span class="params">(<span name="partitionFields">partitionFields: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">TemplatePartition</span><span class="params">(<span name="partitionFields">partitionFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
       </h4>
       
@@ -253,7 +253,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPartitionFields</span><span class="params">()</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">getPartitionFields</span><span class="params">()</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns the partition fields.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the partition fields.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.TemplatePartition">TemplatePartition</a> → Partition</dd></dl></div>
@@ -331,7 +331,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">partitionFields</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">partitionFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       
@@ -383,7 +383,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toPartition</span><span class="params">(<span name="tupleEntry">tupleEntry: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.TupleEntry" class="extype" target="_top">TupleEntry</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toPartition</span><span class="params">(<span name="tupleEntry">tupleEntry: <span class="extype" name="cascading.tuple.TupleEntry">TupleEntry</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given the specified tuple entry fill in the supplied template entry to create the partition
@@ -399,7 +399,7 @@ path.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTuple</span><span class="params">(<span name="partition">partition: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tupleEntry">tupleEntry: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.TupleEntry" class="extype" target="_top">TupleEntry</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">toTuple</span><span class="params">(<span name="partition">partition: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tupleEntry">tupleEntry: <span class="extype" name="cascading.tuple.TupleEntry">TupleEntry</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Converts the given partition string to field values and populates the supplied tuple entry
@@ -479,7 +479,7 @@ with it.
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="cascading.tap.partition.Partition">
-              <h3>Inherited from <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.partition.Partition" class="extype" target="_top">Partition</a></h3>
+              <h3>Inherited from <span class="extype" name="cascading.tap.partition.Partition">Partition</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">

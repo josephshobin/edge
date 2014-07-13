@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>PartitionTextLine - com.cba.omnia.edge.source.partition.PartitionTextLine</title>
-          <meta name="description" content="PartitionTextLine - com.cba.omnia.edge.source.partition.PartitionTextLine" />
-          <meta name="keywords" content="PartitionTextLine com.cba.omnia.edge.source.partition.PartitionTextLine" />
+          <title>PartitionedTextLine - com.cba.omnia.edge.source.partition.PartitionedTextLine</title>
+          <meta name="description" content="PartitionedTextLine - com.cba.omnia.edge.source.partition.PartitionedTextLine" />
+          <meta name="keywords" content="PartitionedTextLine com.cba.omnia.edge.source.partition.PartitionedTextLine" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
-            var hash = 'com.cba.omnia.edge.source.partition.PartitionTextLine';
+            var hash = 'com.cba.omnia.edge.source.partition.PartitionedTextLine';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,7 +26,7 @@
       <div id="definition">
         <img src="../../../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a>.<a href="package.html" class="extype" name="com.cba.omnia.edge.source.partition">partition</a></p>
-        <h1>PartitionTextLine</h1>
+        <h1>PartitionedTextLine</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">PartitionTextLine</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="valueSetter">valueSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>)</span><span class="result"> extends <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a> with <span class="extype" name="com.twitter.scalding.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)] with <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mappable" class="extype" target="_top">Mappable</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">PartitionedTextLine</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>)</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span> with <span class="extype" name="com.twitter.scalding.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)] with <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -48,9 +48,9 @@
 IterablePipe(data, flowDef, mode)
   .write(PartitionTextLine[(<span class="std">String</span>, <span class="std">String</span>)](args(<span class="lit">"out"</span>), <span class="lit">"col1=%s/col2=%s"</span>))</pre><p>For reading it produces a pair <code>(P, (Long, String))</code> where <code>P</code> is the partition data, <code>Long</code>
 is the offset into the file and <code>String</code> is a line from the file. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((<span class="std">String</span>, <span class="std">String</span>), (<span class="std">Long</span>, <span class="std">String</span>))] = PartitionTextLine[(<span class="std">String</span>, <span class="std">String</span>)](args(<span class="lit">"in"</span>), <span class="lit">"col1=%s/col2=%s"</span>)</pre></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>Base path of the partitioned directory</p></dd><dt class="param">template</dt><dd class="cmt"><p>Template for the partitioned path</p></dd><dt class="param">encoding</dt><dd class="cmt"><p>Text encoding of the file content
-</p></dd></dl><div class="toggleContainer block">
+</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/partition/PartitionedTextLine.scala" target="_blank">PartitionedTextLine.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mappable" class="extype" target="_top">Mappable</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))], <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.typed.TypedSource" class="extype" target="_top">TypedSource</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))], <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.typed.TypedSink" class="extype" target="_top">TypedSink</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)], <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a>, <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Source" class="extype" target="_top">Source</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))], <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))], <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)], <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span>, <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -68,7 +68,7 @@ is the offset into the file and <code>String</code> is a line from the file. Bel
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.cba.omnia.edge.source.partition.PartitionTextLine"><span>PartitionTextLine</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.twitter.scalding.Mappable"><span>Mappable</span></li><li class="in" name="com.twitter.scalding.typed.TypedSource"><span>TypedSource</span></li><li class="in" name="com.twitter.scalding.typed.TypedSink"><span>TypedSink</span></li><li class="in" name="com.twitter.scalding.SchemedSource"><span>SchemedSource</span></li><li class="in" name="com.twitter.scalding.Source"><span>Source</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.cba.omnia.edge.source.partition.PartitionedTextLine"><span>PartitionedTextLine</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.twitter.scalding.Mappable"><span>Mappable</span></li><li class="in" name="com.twitter.scalding.typed.TypedSource"><span>TypedSource</span></li><li class="in" name="com.twitter.scalding.typed.TypedSink"><span>TypedSink</span></li><li class="in" name="com.twitter.scalding.SchemedSource"><span>SchemedSource</span></li><li class="in" name="com.twitter.scalding.Source"><span>Source</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -88,16 +88,16 @@ is the offset into the file and <code>String</code> is a line from the file. Bel
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(path:String,template:String,encoding:String)(implicitm:Manifest[P],implicitvalueSetter:com.twitter.scalding.TupleSetter[String],implicitvalueConverter:com.twitter.scalding.TupleConverter[(Long,String)],implicitpartitionSetter:com.twitter.scalding.TupleSetter[P],implicitpartitionConverter:com.twitter.scalding.TupleConverter[P]):com.cba.omnia.edge.source.partition.PartitionTextLine[P]"></a>
-      <a id="&lt;init&gt;:PartitionTextLine[P]"></a>
+              <ol><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(path:String,template:String,encoding:String)(implicitvalueSetter:com.twitter.scalding.TupleSetter[String],implicitvalueConverter:com.twitter.scalding.TupleConverter[(Long,String)],implicitpartitionSetter:com.twitter.scalding.TupleSetter[P],implicitpartitionConverter:com.twitter.scalding.TupleConverter[P]):com.cba.omnia.edge.source.partition.PartitionedTextLine[P]"></a>
+      <a id="&lt;init&gt;:PartitionedTextLine[P]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PartitionTextLine</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="valueSetter">valueSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>]</span>)</span>
+        <span class="name">PartitionedTextLine</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="encoding">encoding: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name="cascading.scheme.hadoop.TextLine.DEFAULT_CHARSET">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>Base path of the partitioned directory</p></dd><dt class="param">template</dt><dd class="cmt"><p>Template for the partitioned path</p></dd><dt class="param">encoding</dt><dd class="cmt"><p>Text encoding of the file content
@@ -198,7 +198,7 @@ is the offset into the file and <code>String</code> is a line from the file. Bel
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">checkFlowDefNotNull</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">checkFlowDefNotNull</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -221,7 +221,7 @@ is the offset into the file and <code>String</code> is a line from the file. Bel
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#converter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#converter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter[U&gt;:(P,(Long,String))]:com.twitter.scalding.TupleConverter[U]"></a>
       <a id="converter[U&gt;:(P,(Long,String))]:TupleConverter[U]"></a>
       <h4 class="signature">
@@ -230,14 +230,14 @@ is the offset into the file and <code>String</code> is a line from the file. Bel
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">converter</span><span class="tparams">[<span name="U">U &gt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))</span>]</span><span class="result">: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.converter.U">U</span>]</span>
+        <span class="name">converter</span><span class="tparams">[<span name="U">U &gt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))</span>]</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.converter.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Combine both the partition and value converter to extract the data from a flat cascading tuple
 into a pair of <code>P</code> and <code>(offset, line)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Combine both the partition and value converter to extract the data from a flat cascading tuple
 into a pair of <code>P</code> and <code>(offset, line)</code>.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → TypedSource</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#createTap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → TypedSource</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#createTap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createTap(readOrWrite:com.twitter.scalding.AccessMode)(implicitmode:com.twitter.scalding.Mode):cascading.tap.Tap[_,_,_]"></a>
       <a id="createTap(AccessMode)(Mode):Tap[_,_,_]"></a>
       <h4 class="signature">
@@ -246,11 +246,11 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createTap</span><span class="params">(<span name="readOrWrite">readOrWrite: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.AccessMode" class="extype" target="_top">AccessMode</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>
+        <span class="name">createTap</span><span class="params">(<span name="readOrWrite">readOrWrite: <span class="extype" name="com.twitter.scalding.AccessMode">AccessMode</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates the taps for local and hdfs mode.</p><div class="fullcomment"><div class="comment cmt"><p>Creates the taps for local and hdfs mode.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → Source</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#encoding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Creates the taps for local and hdfs mode.</p><div class="fullcomment"><div class="comment cmt"><p>Creates the taps for local and hdfs mode.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → Source</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#encoding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="encoding:String"></a>
       <a id="encoding:String"></a>
       <h4 class="signature">
@@ -305,7 +305,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))) ⇒ <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>, <span name="setter">setter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">flatMapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))) ⇒ <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="setter">setter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
@@ -322,7 +322,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#hdfsScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#hdfsScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hdfsScheme:cascading.scheme.Scheme[org.apache.hadoop.mapred.JobConf,org.apache.hadoop.mapred.RecordReader[_,_],org.apache.hadoop.mapred.OutputCollector[_,_],_,_]"></a>
       <a id="hdfsScheme:Scheme[JobConf,RecordReader[_,_],OutputCollector[_,_],_,_]"></a>
       <h4 class="signature">
@@ -331,10 +331,10 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hdfsScheme</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[_, _], <span class="extype" name="org.apache.hadoop.mapred.OutputCollector">OutputCollector</span>[_, _], _, _]</span>
+        <span class="name">hdfsScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[_, _], <span class="extype" name="org.apache.hadoop.mapred.OutputCollector">OutputCollector</span>[_, _], _, _]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → SchemedSource</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → SchemedSource</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -348,7 +348,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#localScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#localScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="localScheme:cascading.scheme.Scheme[java.util.Properties,java.io.InputStream,java.io.OutputStream,_,_]"></a>
       <a id="localScheme:Scheme[Properties,InputStream,OutputStream,_,_]"></a>
       <h4 class="signature">
@@ -357,10 +357,10 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">localScheme</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="java.util.Properties">Properties</span>, <span class="extype" name="java.io.InputStream">InputStream</span>, <span class="extype" name="java.io.OutputStream">OutputStream</span>, _, _]</span>
+        <span class="name">localScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="java.util.Properties">Properties</span>, <span class="extype" name="java.io.InputStream">InputStream</span>, <span class="extype" name="java.io.OutputStream">OutputStream</span>, _, _]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → SchemedSource</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → SchemedSource</dd></dl></div>
     </li><li name="com.twitter.scalding.Mappable#mapTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapTo[U&lt;:&lt;?&gt;](out:&lt;?&gt;)(mf:&lt;?&gt;)(implicitflowDef:&lt;?&gt;,implicitmode:&lt;?&gt;,implicitsetter:&lt;?&gt;):cascading.pipe.Pipe"></a>
       <a id="mapTo[U](Fields)(((P,(Long,String)))⇒U)(FlowDef,Mode,TupleSetter[U]):Pipe"></a>
@@ -370,7 +370,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))) ⇒ <span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>, <span name="setter">setter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span>]</span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">mapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))) ⇒ <span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="setter">setter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
@@ -413,7 +413,20 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#partitionFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#partitionConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="partitionConverter:com.twitter.scalding.TupleConverter[P]"></a>
+      <a id="partitionConverter:TupleConverter[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionConverter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#partitionFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="partitionFields:cascading.tuple.Fields"></a>
       <a id="partitionFields:Fields"></a>
       <h4 class="signature">
@@ -422,11 +435,24 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">partitionFields</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">partitionFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#partitionSetter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="partitionSetter:com.twitter.scalding.TupleSetter[P]"></a>
+      <a id="partitionSetter:TupleSetter[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionSetter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="path:String"></a>
       <a id="path:String"></a>
       <h4 class="signature">
@@ -448,11 +474,11 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">read</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#setter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#setter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setter[U&lt;:(P,String)]:com.twitter.scalding.TupleSetter[U]"></a>
       <a id="setter[U&lt;:(P,String)]:TupleSetter[U]"></a>
       <h4 class="signature">
@@ -461,11 +487,11 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setter</span><span class="tparams">[<span name="U">U &lt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>]</span><span class="result">: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.setter.U">U</span>]</span>
+        <span class="name">setter</span><span class="tparams">[<span name="U">U &lt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>]</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.setter.U">U</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Flatten a pair of <code>P</code> and <code>line</code> into a cascading tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Flatten a pair of <code>P</code> and <code>line</code> into a cascading tuple.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → TypedSink</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#sinkFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Flatten a pair of <code>P</code> and <code>line</code> into a cascading tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Flatten a pair of <code>P</code> and <code>line</code> into a cascading tuple.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → TypedSink</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#sinkFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sinkFields:cascading.tuple.Fields"></a>
       <a id="sinkFields:Fields"></a>
       <h4 class="signature">
@@ -474,10 +500,10 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkFields</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">sinkFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine">PartitionTextLine</a> → TypedSink</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine">PartitionedTextLine</a> → TypedSink</dd></dl></div>
     </li><li name="com.twitter.scalding.SchemedSource#sinkMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sinkMode:cascading.tap.SinkMode"></a>
       <a id="sinkMode:SinkMode"></a>
@@ -487,7 +513,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkMode</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.SinkMode" class="extype" target="_top">SinkMode</a></span>
+        <span class="name">sinkMode</span><span class="result">: <span class="extype" name="cascading.tap.SinkMode">SinkMode</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemedSource</dd></dl></div>
@@ -500,7 +526,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sourceFields</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">sourceFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
@@ -517,7 +543,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.partition.PartitionTextLine#template" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#template" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="template:String"></a>
       <a id="template:String"></a>
       <h4 class="signature">
@@ -539,7 +565,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</span>
+        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
@@ -552,7 +578,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformForRead</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">transformForRead</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -565,7 +591,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformForWrite</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">transformForWrite</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -591,10 +617,36 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validateTaps</span><span class="params">(<span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">validateTaps</span><span class="params">(<span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#valueConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="valueConverter:com.twitter.scalding.TupleConverter[(Long,String)]"></a>
+      <a id="valueConverter:TupleConverter[(Long,String)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valueConverter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedTextLine#valueSetter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="valueSetter:com.twitter.scalding.TupleSetter[String]"></a>
+      <a id="valueSetter:TupleSetter[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valueSetter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -661,7 +713,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">writeFrom</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">writeFrom</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -681,7 +733,7 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) replace with Mappable.toIterator">readAtSubmitter</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>, <span name="conv">conv: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) replace with Mappable.toIterator">readAtSubmitter</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="conv">conv: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd><dt>Annotations</dt><dd>
@@ -700,15 +752,15 @@ into a pair of <code>P</code> and <code>(offset, line)</code>.
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="com.twitter.scalding.Mappable">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mappable" class="extype" target="_top">Mappable</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</h3>
             </div><div class="parent" name="com.twitter.scalding.typed.TypedSource">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.typed.TypedSource" class="extype" target="_top">TypedSource</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, (<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Predef.String">String</span>))]</h3>
             </div><div class="parent" name="com.twitter.scalding.typed.TypedSink">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.typed.TypedSink" class="extype" target="_top">TypedSink</a>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)]</h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedTextLine.P">P</span>, <span class="extype" name="scala.Predef.String">String</span>)]</h3>
             </div><div class="parent" name="com.twitter.scalding.SchemedSource">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span></h3>
             </div><div class="parent" name="com.twitter.scalding.Source">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Source" class="extype" target="_top">Source</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.Source">Source</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">

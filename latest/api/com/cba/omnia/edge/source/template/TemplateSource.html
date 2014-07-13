@@ -35,7 +35,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">TemplateSource</span><span class="result"> extends <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.FileSource" class="extype" target="_top">FileSource</a></span>
+        <span class="name">TemplateSource</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.FileSource">FileSource</span></span>
       </span>
       </h4>
       
@@ -54,9 +54,9 @@ during the reduce phase, this will happen if there is a group by
 on the fields used in the templates, if your job does not naturally
 have this structure you can add the following to your job:</p><pre>pipe.groupBy(templateFields) { _.pass }</pre><p>This implementation is based upon a suggested approach for scalding
 discussed in https://github.com/twitter/scalding/issues/484.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/template/TemplateSource.scala" target="_blank">TemplateSource.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.FileSource" class="extype" target="_top">FileSource</a>, <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.LocalSourceOverride" class="extype" target="_top">LocalSourceOverride</a>, <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a>, <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Source" class="extype" target="_top">Source</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.scalding.FileSource">FileSource</span>, <span class="extype" name="com.twitter.scalding.LocalSourceOverride">LocalSourceOverride</span>, <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span>, <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a href="TemplateCsv.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a></div>
@@ -149,7 +149,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">templateFields</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">templateFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The fields to populate the template with</p>
@@ -245,7 +245,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">checkFlowDefNotNull</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">checkFlowDefNotNull</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -277,7 +277,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createHdfsReadTap</span><span class="params">(<span name="hdfsMode">hdfsMode: <span class="extype" name="com.twitter.scalding.Hdfs">Hdfs</span></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, _, _]</span>
+        <span class="name">createHdfsReadTap</span><span class="params">(<span name="hdfsMode">hdfsMode: <span class="extype" name="com.twitter.scalding.Hdfs">Hdfs</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, _, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
@@ -290,7 +290,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createLocalTap</span><span class="params">(<span name="sinkMode">sinkMode: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.SinkMode" class="extype" target="_top">SinkMode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>
+        <span class="name">createLocalTap</span><span class="params">(<span name="sinkMode">sinkMode: <span class="extype" name="cascading.tap.SinkMode">SinkMode</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LocalSourceOverride</dd></dl></div>
@@ -303,7 +303,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createTap</span><span class="params">(<span name="readOrWrite">readOrWrite: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.AccessMode" class="extype" target="_top">AccessMode</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>
+        <span class="name">createTap</span><span class="params">(<span name="readOrWrite">readOrWrite: <span class="extype" name="com.twitter.scalding.AccessMode">AccessMode</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a> → FileSource → Source</dd></dl></div>
@@ -413,7 +413,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hdfsScheme</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[_, _], <span class="extype" name="org.apache.hadoop.mapred.OutputCollector">OutputCollector</span>[_, _], _, _]</span>
+        <span class="name">hdfsScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[_, _], <span class="extype" name="org.apache.hadoop.mapred.OutputCollector">OutputCollector</span>[_, _], _, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemedSource</dd></dl></div>
@@ -452,7 +452,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">localScheme</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="java.util.Properties">Properties</span>, <span class="extype" name="java.io.InputStream">InputStream</span>, <span class="extype" name="java.io.OutputStream">OutputStream</span>, _, _]</span>
+        <span class="name">localScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="java.util.Properties">Properties</span>, <span class="extype" name="java.io.InputStream">InputStream</span>, <span class="extype" name="java.io.OutputStream">OutputStream</span>, _, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemedSource</dd></dl></div>
@@ -517,7 +517,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">read</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -530,7 +530,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkMode</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.SinkMode" class="extype" target="_top">SinkMode</a></span>
+        <span class="name">sinkMode</span><span class="result">: <span class="extype" name="cascading.tap.SinkMode">SinkMode</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemedSource</dd></dl></div>
@@ -569,7 +569,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformForRead</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">transformForRead</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -582,7 +582,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformForWrite</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">transformForWrite</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -608,7 +608,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validateTaps</span><span class="params">(<span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">validateTaps</span><span class="params">(<span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileSource → Source</dd></dl></div>
@@ -678,7 +678,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">writeFrom</span><span class="params">(<span name="pipe">pipe: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowDef" class="extype" target="_top">FlowDef</a></span>, <span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.pipe.Pipe" class="extype" target="_top">Pipe</a></span>
+        <span class="name">writeFrom</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
@@ -698,7 +698,7 @@ discussed in https://github.com/twitter/scalding/issues/484.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) replace with Mappable.toIterator">readAtSubmitter</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Mode" class="extype" target="_top">Mode</a></span>, <span name="conv">conv: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) replace with Mappable.toIterator">readAtSubmitter</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="conv">conv: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="com.twitter.scalding.Source.readAtSubmitter.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd><dt>Annotations</dt><dd>
@@ -711,13 +711,13 @@ discussed in https://github.com/twitter/scalding/issues/484.
 
         <div id="inheritedMembers">
         <div class="parent" name="com.twitter.scalding.FileSource">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.FileSource" class="extype" target="_top">FileSource</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.FileSource">FileSource</span></h3>
             </div><div class="parent" name="com.twitter.scalding.LocalSourceOverride">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.LocalSourceOverride" class="extype" target="_top">LocalSourceOverride</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.LocalSourceOverride">LocalSourceOverride</span></h3>
             </div><div class="parent" name="com.twitter.scalding.SchemedSource">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.SchemedSource" class="extype" target="_top">SchemedSource</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span></h3>
             </div><div class="parent" name="com.twitter.scalding.Source">
-              <h3>Inherited from <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.Source" class="extype" target="_top">Source</a></h3>
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.Source">Source</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">

@@ -39,9 +39,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/memory/DistributableMemorySourceScheme.scala" target="_blank">DistributableMemorySourceScheme.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">MemorySourceScheme</span>, <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="java.lang.Void">Void</span>], <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">MemorySourceScheme</span>, <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="java.lang.Void">Void</span>], <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DistributableMemorySourceScheme</span><span class="params">(<span name="tuples">tuples: <span class="extype" name="java.util.List">List</span>[<a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Tuple" class="extype" target="_top">Tuple</a>]</span>, <span name="fields">fields: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>, <span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mappers">mappers: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">DistributableMemorySourceScheme</span><span class="params">(<span name="tuples">tuples: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="cascading.tuple.Tuple">Tuple</span>]</span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mappers">mappers: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4>
       
@@ -291,7 +291,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSinkFields</span><span class="params">()</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">getSinkFields</span><span class="params">()</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -304,7 +304,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSourceFields</span><span class="params">()</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">getSourceFields</span><span class="params">()</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -330,7 +330,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getTuples</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Tuple" class="extype" target="_top">Tuple</a>]</span>
+        <span class="name">getTuples</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="cascading.tuple.Tuple">Tuple</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme</dd></dl></div>
@@ -447,7 +447,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSinkFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>, <span name="arg2">arg2: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -460,7 +460,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSinkFieldsInternal</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSinkFieldsInternal</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../cascading$scheme.html" class="extype" name="cascading.scheme">cascading.scheme</a>] </dd><dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -473,7 +473,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSourceFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>, <span name="arg2">arg2: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -486,7 +486,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSourceFieldsInternal</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSourceFieldsInternal</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../cascading$scheme.html" class="extype" name="cascading.scheme">cascading.scheme</a>] </dd><dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -499,7 +499,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retrieveSinkFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">retrieveSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -512,7 +512,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retrieveSourceFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[_, _, _]</span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">retrieveSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -538,7 +538,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setSinkFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -551,7 +551,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setSourceFields</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -564,7 +564,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sink</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sink</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme → Scheme</dd><dt>Annotations</dt><dd>
@@ -583,7 +583,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkCleanup</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sinkCleanup</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd><dt>Annotations</dt><dd>
@@ -602,7 +602,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkConfInit</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>]</span>, <span name="arg2">arg2: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sinkConfInit</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>]</span>, <span name="arg2">arg2: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme → Scheme</dd></dl></div>
@@ -615,7 +615,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sinkPrepare</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sinkPrepare</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SinkCall">SinkCall</span>[<span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="java.lang.Void">Void</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd><dt>Annotations</dt><dd>
@@ -634,7 +634,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">source</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">source</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme → Scheme</dd><dt>Annotations</dt><dd>
@@ -653,7 +653,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sourceCleanup</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sourceCleanup</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme → Scheme</dd></dl></div>
@@ -666,7 +666,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sourceConfInit</span><span class="params">(<span name="flowProcess">flowProcess: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="tap">tap: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tap.Tap" class="extype" target="_top">Tap</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>]</span>, <span name="conf">conf: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sourceConfInit</span><span class="params">(<span name="flowProcess">flowProcess: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="tap">tap: <span class="extype" name="cascading.tap.Tap">Tap</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>]</span>, <span name="conf">conf: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.memory.DistributableMemorySourceScheme">DistributableMemorySourceScheme</a> → MemorySourceScheme → Scheme</dd></dl></div>
@@ -679,7 +679,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sourcePrepare</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.flow.FlowProcess" class="extype" target="_top">FlowProcess</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sourcePrepare</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.scheme.SourceCall">SourceCall</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MemorySourceScheme → Scheme</dd></dl></div>
@@ -778,7 +778,7 @@
         <div class="parent" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">
               <h3>Inherited from <span class="extype" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">MemorySourceScheme</span></h3>
             </div><div class="parent" name="cascading.scheme.Scheme">
-              <h3>Inherited from <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.scheme.Scheme" class="extype" target="_top">Scheme</a>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="java.lang.Void">Void</span>]</h3>
+              <h3>Inherited from <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="java.lang.Void">Void</span>]</h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">

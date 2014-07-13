@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Utility functions to assist with creating partitioned sourced.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Utility functions to assist with creating partitioned sourced.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/partition/PartitionUtil.scala" target="_blank">PartitionUtil.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -191,7 +191,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">converter</span><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>, <span name="U">U &gt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.T">T</span>)</span>]</span><span class="params">(<span name="valueConverter">valueConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.T">T</span>]</span>, <span name="partitionConverter">partitionConverter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.P">P</span>]</span>)</span><span class="result">: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleConverter" class="extype" target="_top">TupleConverter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.U">U</span>]</span>
+        <span class="name">converter</span><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>, <span name="U">U &gt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.T">T</span>)</span>]</span><span class="params">(<span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.T">T</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.P">P</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.converter.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">A tuple converter that splits a cascading tuple into a pair of types.</p>
@@ -327,7 +327,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setter</span><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>, <span name="U">U &lt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.T">T</span>)</span>]</span><span class="params">(<span name="valueSetter">valueSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.T">T</span>]</span>, <span name="partitionSetter">partitionSetter: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.P">P</span>]</span>)</span><span class="result">: <a href="http://twitter.github.io/scalding/index.html#com.twitter.scalding.TupleSetter" class="extype" target="_top">TupleSetter</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.U">U</span>]</span>
+        <span class="name">setter</span><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>, <span name="U">U &lt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.T">T</span>)</span>]</span><span class="params">(<span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.T">T</span>]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.P">P</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionUtil.setter.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">A tuple setter for a pair of types which are flattened into a cascading tuple.</p>
@@ -353,7 +353,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toFields</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="end">end: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="http://docs.cascading.org/cascading/2.5/javadoc/index.html#cascading.tuple.Fields" class="extype" target="_top">Fields</a></span>
+        <span class="name">toFields</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="end">end: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       

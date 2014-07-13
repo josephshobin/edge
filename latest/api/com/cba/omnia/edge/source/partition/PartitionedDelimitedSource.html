@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>TemplateCsv - com.cba.omnia.edge.source.template.TemplateCsv</title>
-          <meta name="description" content="TemplateCsv - com.cba.omnia.edge.source.template.TemplateCsv" />
-          <meta name="keywords" content="TemplateCsv com.cba.omnia.edge.source.template.TemplateCsv" />
+          <title>PartitionedDelimitedSource - com.cba.omnia.edge.source.partition.PartitionedDelimitedSource</title>
+          <meta name="description" content="PartitionedDelimitedSource - com.cba.omnia.edge.source.partition.PartitionedDelimitedSource" />
+          <meta name="keywords" content="PartitionedDelimitedSource com.cba.omnia.edge.source.partition.PartitionedDelimitedSource" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
-            var hash = 'com.cba.omnia.edge.source.template.TemplateCsv';
+            var hash = 'com.cba.omnia.edge.source.partition.PartitionedDelimitedSource';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a>.<a href="package.html" class="extype" name="com.cba.omnia.edge.source.template">template</a></p>
-        <h1>TemplateCsv</h1>
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a>.<a href="package.html" class="extype" name="com.cba.omnia.edge.source.partition">partition</a></p>
+        <h1>PartitionedDelimitedSource</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,15 +35,21 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TemplateCsv</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="templateFields">templateFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="separator">separator: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;,&quot;</span></span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span> = <span class="symbol">cascading.tuple.Fields.ALL</span></span>, <span name="skipHeader">skipHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="writeHeader">writeHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="quote">quote: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;\&quot;&quot;</span></span>)</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.FixedPathSource">FixedPathSource</span> with <span class="extype" name="com.twitter.scalding.DelimitedScheme">DelimitedScheme</span> with <a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">PartitionedDelimitedSource</span><span class="tparams">[<span name="P">P</span>, <span name="T">T</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="separator">separator: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="skipHeader">skipHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="writeHeader">writeHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="quote">quote: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;\&quot;&quot;</span></span>, <span name="strict">strict: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="safe">safe: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mt">mt: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>)</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span> with <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>] with <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Delimited text that is partitioned into bins based upon <code>template</code> and
-<code>templateFields</code>.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/template/TemplateSource.scala" target="_blank">TemplateSource.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Scalding source to read or write partitioned delimited text.</p><p>For writing it expects a pair of <code>(P, R)</code>, where <code>P</code> is the data used for partitioning and
+<code>T</code> is the output to write out. Below is an example.</p><pre><span class="kw">val</span> data = <span class="std">List</span>(
+  ((<span class="lit">"a"</span>, <span class="lit">"x"</span>), (<span class="lit">"i"</span>, <span class="num">1</span>)),
+  ((<span class="lit">"a"</span>, <span class="lit">"y"</span>), (<span class="lit">"j"</span>, <span class="num">2</span>)),
+  ((<span class="lit">"b"</span>, <span class="lit">"z"</span>), (<span class="lit">"k"</span>, <span class="num">3</span>))
+)
+IterablePipe(data, flowDef, mode)
+  .write(PartitionedDelimited[(<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>)](args(<span class="lit">"out"</span>), <span class="lit">"col1=%s/col2=%s"</span>))</pre><p>For reading it produces a pair <code>(P, T</code> where <code>P</code> is the partition data and <code>T</code> is data in the
+files. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>))] = PartitionedDelimited[(<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>)](args(<span class="lit">"in"</span>), <span class="lit">"col1=%s/col2=%s"</span>)</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/d521c49767c3c2da86f01e2066e77b221d1793d0//src/main/scala/com/cba/omnia/edge/source/partition/PartitionedDelimitedSource.scala" target="_blank">PartitionedDelimitedSource.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a>, <span class="extype" name="com.twitter.scalding.DelimitedScheme">DelimitedScheme</span>, <span class="extype" name="com.twitter.scalding.FixedPathSource">FixedPathSource</span>, <span class="extype" name="com.twitter.scalding.FileSource">FileSource</span>, <span class="extype" name="com.twitter.scalding.LocalSourceOverride">LocalSourceOverride</span>, <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span>, <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>], <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span>, <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -61,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.cba.omnia.edge.source.template.TemplateCsv"><span>TemplateCsv</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.cba.omnia.edge.source.template.TemplateSource"><span>TemplateSource</span></li><li class="in" name="com.twitter.scalding.DelimitedScheme"><span>DelimitedScheme</span></li><li class="in" name="com.twitter.scalding.FixedPathSource"><span>FixedPathSource</span></li><li class="in" name="com.twitter.scalding.FileSource"><span>FileSource</span></li><li class="in" name="com.twitter.scalding.LocalSourceOverride"><span>LocalSourceOverride</span></li><li class="in" name="com.twitter.scalding.SchemedSource"><span>SchemedSource</span></li><li class="in" name="com.twitter.scalding.Source"><span>Source</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource"><span>PartitionedDelimitedSource</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.cba.omnia.edge.source.partition.PartitionSchemed"><span>PartitionSchemed</span></li><li class="in" name="com.twitter.scalding.Mappable"><span>Mappable</span></li><li class="in" name="com.twitter.scalding.typed.TypedSource"><span>TypedSource</span></li><li class="in" name="com.twitter.scalding.typed.TypedSink"><span>TypedSink</span></li><li class="in" name="com.twitter.scalding.SchemedSource"><span>SchemedSource</span></li><li class="in" name="com.twitter.scalding.Source"><span>Source</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,16 +87,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.cba.omnia.edge.source.template.TemplateCsv#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(path:String,template:String,templateFields:cascading.tuple.Fields,separator:String,fields:cascading.tuple.Fields,skipHeader:Boolean,writeHeader:Boolean,quote:String):com.cba.omnia.edge.source.template.TemplateCsv"></a>
-      <a id="&lt;init&gt;:TemplateCsv"></a>
+              <ol><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(path:String,template:String,separator:String,fields:cascading.tuple.Fields,skipHeader:Boolean,writeHeader:Boolean,quote:String,strict:Boolean,safe:Boolean)(implicitmt:Manifest[T],implicitvalueSetter:com.twitter.scalding.TupleSetter[T],implicitvalueConverter:com.twitter.scalding.TupleConverter[T],implicitpartitionSetter:com.twitter.scalding.TupleSetter[P],implicitpartitionConverter:com.twitter.scalding.TupleConverter[P]):com.cba.omnia.edge.source.partition.PartitionedDelimitedSource[P,T]"></a>
+      <a id="&lt;init&gt;:PartitionedDelimitedSource[P,T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TemplateCsv</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="templateFields">templateFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="separator">separator: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;,&quot;</span></span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span> = <span class="symbol">cascading.tuple.Fields.ALL</span></span>, <span name="skipHeader">skipHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="writeHeader">writeHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="quote">quote: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;\&quot;&quot;</span></span>)</span>
+        <span class="name">PartitionedDelimitedSource</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="separator">separator: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="skipHeader">skipHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="writeHeader">writeHeader: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="quote">quote: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;\&quot;&quot;</span></span>, <span name="strict">strict: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="safe">safe: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mt">mt: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueSetter">valueSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="valueConverter">valueConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>, <span name="partitionSetter">partitionSetter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>, <span name="partitionConverter">partitionConverter: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>)</span>
       </span>
       </h4>
       
@@ -182,7 +188,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="com.twitter.scalding.Source#checkFlowDefNotNull" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="checkFlowDefNotNull(implicitflowDef:&lt;?&gt;,implicitmode:&lt;?&gt;):Unit"></a>
+      <a id="checkFlowDefNotNull(implicitflowDef:cascading.flow.FlowDef,implicitmode:com.twitter.scalding.Mode):Unit"></a>
       <a id="checkFlowDefNotNull(FlowDef,Mode):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -213,33 +219,23 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.twitter.scalding.FileSource#createHdfsReadTap" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createHdfsReadTap(hdfsMode:com.twitter.scalding.Hdfs):cascading.tap.Tap[org.apache.hadoop.mapred.JobConf,_,_]"></a>
-      <a id="createHdfsReadTap(Hdfs):Tap[JobConf,_,_]"></a>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#converter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="converter[U&gt;:(P,T)]:com.twitter.scalding.TupleConverter[U]"></a>
+      <a id="converter[U&gt;:(P,T)]:TupleConverter[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createHdfsReadTap</span><span class="params">(<span name="hdfsMode">hdfsMode: <span class="extype" name="com.twitter.scalding.Hdfs">Hdfs</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, _, _]</span>
+        <span class="name">converter</span><span class="tparams">[<span name="U">U &gt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)</span>]</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.converter.U">U</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
-    </li><li name="com.twitter.scalding.LocalSourceOverride#createLocalTap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createLocalTap(sinkMode:&lt;?&gt;):cascading.tap.Tap[_,_,_]"></a>
-      <a id="createLocalTap(SinkMode):Tap[_,_,_]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">createLocalTap</span><span class="params">(<span name="sinkMode">sinkMode: <span class="extype" name="cascading.tap.SinkMode">SinkMode</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LocalSourceOverride</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateSource#createTap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Combine both the partition and value converter to extract the data from a flat cascading tuple
+into a pair of <code>P</code> and <code>T</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Combine both the partition and value converter to extract the data from a flat cascading tuple
+into a pair of <code>P</code> and <code>T</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a> → TypedSource</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#createTap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createTap(readOrWrite:com.twitter.scalding.AccessMode)(implicitmode:com.twitter.scalding.Mode):cascading.tap.Tap[_,_,_]"></a>
       <a id="createTap(AccessMode)(Mode):Tap[_,_,_]"></a>
       <h4 class="signature">
@@ -251,7 +247,7 @@
         <span class="name">createTap</span><span class="params">(<span name="readOrWrite">readOrWrite: <span class="extype" name="com.twitter.scalding.AccessMode">AccessMode</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a> → FileSource → Source</dd></dl></div>
+      <p class="shortcomment cmt">Creates the taps for local and hdfs mode.</p><div class="fullcomment"><div class="comment cmt"><p>Creates the taps for local and hdfs mode.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a> → Source</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -265,20 +261,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.twitter.scalding.FixedPathSource#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(that:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FixedPathSource → AnyRef → Any</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#fields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#fields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fields:cascading.tuple.Fields"></a>
       <a id="fields:Fields"></a>
       <h4 class="signature">
@@ -290,7 +273,7 @@
         <span class="name">fields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → DelimitedScheme</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -310,6 +293,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.twitter.scalding.Mappable#flatMapTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMapTo[U](out:cascading.tuple.Fields)(mf:T=&gt;TraversableOnce[U])(implicitflowDef:cascading.flow.FlowDef,implicitmode:com.twitter.scalding.Mode,implicitsetter:com.twitter.scalding.TupleSetter[U]):cascading.pipe.Pipe"></a>
+      <a id="flatMapTo[U](Fields)(((P,T))⇒TraversableOnce[U])(FlowDef,Mode,TupleSetter[U]):Pipe"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)) ⇒ <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="setter">setter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.Mappable.flatMapTo.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -323,59 +319,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FileSource#goodHdfsPaths" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="goodHdfsPaths(hdfsMode:&lt;?&gt;):Iterable[String]"></a>
-      <a id="goodHdfsPaths(Hdfs):Iterable[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">goodHdfsPaths</span><span class="params">(<span name="hdfsMode">hdfsMode: <span class="extype" name="com.twitter.scalding.Hdfs">Hdfs</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
-    </li><li name="com.twitter.scalding.FixedPathSource#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FixedPathSource → AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FixedPathSource#hdfsPaths" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hdfsPaths:List[String]"></a>
-      <a id="hdfsPaths:List[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hdfsPaths</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FixedPathSource → FileSource</dd></dl></div>
-    </li><li name="com.twitter.scalding.FileSource#hdfsReadPathsAreGood" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hdfsReadPathsAreGood(conf:&lt;?&gt;):Boolean"></a>
-      <a id="hdfsReadPathsAreGood(Configuration):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hdfsReadPathsAreGood</span><span class="params">(<span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
-    </li><li name="com.twitter.scalding.DelimitedScheme#hdfsScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#hdfsScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hdfsScheme:cascading.scheme.Scheme[org.apache.hadoop.mapred.JobConf,org.apache.hadoop.mapred.RecordReader[_,_],org.apache.hadoop.mapred.OutputCollector[_,_],_,_]"></a>
       <a id="hdfsScheme:Scheme[JobConf,RecordReader[_,_],OutputCollector[_,_],_,_]"></a>
       <h4 class="signature">
@@ -387,20 +331,7 @@
         <span class="name">hdfsScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[_, _], <span class="extype" name="org.apache.hadoop.mapred.OutputCollector">OutputCollector</span>[_, _], _, _]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DelimitedScheme → SchemedSource</dd></dl></div>
-    </li><li name="com.twitter.scalding.FileSource#hdfsWritePath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hdfsWritePath:String"></a>
-      <a id="hdfsWritePath:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hdfsWritePath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → SchemedSource</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -414,32 +345,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FixedPathSource#localPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localPath:String"></a>
-      <a id="localPath:String"></a>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#localScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="localScheme:cascading.scheme.Scheme[java.util.Properties,java.io.InputStream,java.io.OutputStream,_,_]"></a>
+      <a id="localScheme:Scheme[Properties,InputStream,OutputStream,_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">localPath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">localScheme</span><span class="result">: <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="java.util.Properties">Properties</span>, <span class="extype" name="java.io.InputStream">InputStream</span>, <span class="extype" name="java.io.OutputStream">OutputStream</span>, _, _]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FixedPathSource → LocalSourceOverride</dd></dl></div>
-    </li><li name="com.twitter.scalding.DelimitedScheme#localScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localScheme:cascading.scheme.local.TextDelimited"></a>
-      <a id="localScheme:TextDelimited"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → SchemedSource</dd></dl></div>
+    </li><li name="com.twitter.scalding.Mappable#mapTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapTo[U](out:cascading.tuple.Fields)(mf:T=&gt;U)(implicitflowDef:cascading.flow.FlowDef,implicitmode:com.twitter.scalding.Mode,implicitsetter:com.twitter.scalding.TupleSetter[U]):cascading.pipe.Pipe"></a>
+      <a id="mapTo[U](Fields)(((P,T))⇒U)(FlowDef,Mode,TupleSetter[U]):Pipe"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">localScheme</span><span class="result">: <span class="extype" name="cascading.scheme.local.TextDelimited">TextDelimited</span></span>
+        <span class="name">mapTo</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="out">out: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span name="mf">mf: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)) ⇒ <span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="flowDef">flowDef: <span class="extype" name="cascading.flow.FlowDef">FlowDef</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>, <span name="setter">setter: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.Mappable.mapTo.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DelimitedScheme → SchemedSource</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -479,7 +410,46 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#partitionConverter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partitionConverter:com.twitter.scalding.TupleConverter[P]"></a>
+      <a id="partitionConverter:TupleConverter[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionConverter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#partitionFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partitionFields:cascading.tuple.Fields"></a>
+      <a id="partitionFields:Fields"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#partitionSetter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partitionSetter:com.twitter.scalding.TupleSetter[P]"></a>
+      <a id="partitionSetter:TupleSetter[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionSetter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#path" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="path:String"></a>
       <a id="path:String"></a>
       <h4 class="signature">
@@ -491,21 +461,8 @@
         <span class="name">path</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="com.twitter.scalding.FileSource#pathIsGood" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pathIsGood(p:&lt;?&gt;,conf:&lt;?&gt;):Boolean"></a>
-      <a id="pathIsGood(String,Configuration):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pathIsGood</span><span class="params">(<span name="p">p: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FileSource</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#quote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#quote" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="quote:String"></a>
       <a id="quote:String"></a>
       <h4 class="signature">
@@ -517,7 +474,7 @@
         <span class="name">quote</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → DelimitedScheme</dd></dl></div>
+      
     </li><li name="com.twitter.scalding.Source#read" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="read(implicitflowDef:cascading.flow.FlowDef,implicitmode:com.twitter.scalding.Mode):cascading.pipe.Pipe"></a>
       <a id="read(FlowDef,Mode):Pipe"></a>
@@ -531,7 +488,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
-    </li><li name="com.twitter.scalding.DelimitedScheme#safe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#safe" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="safe:Boolean"></a>
       <a id="safe:Boolean"></a>
       <h4 class="signature">
@@ -543,8 +500,8 @@
         <span class="name">safe</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DelimitedScheme</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#separator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#separator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="separator:String"></a>
       <a id="separator:String"></a>
       <h4 class="signature">
@@ -556,7 +513,33 @@
         <span class="name">separator</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → DelimitedScheme</dd></dl></div>
+      
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#setter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setter[U&lt;:(P,T)]:com.twitter.scalding.TupleSetter[U]"></a>
+      <a id="setter[U&lt;:(P,T)]:TupleSetter[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setter</span><span class="tparams">[<span name="U">U &lt;: (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)</span>]</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed.setter.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Flatten a pair of <code>P</code> and <code>T</code> into a cascading tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Flatten a pair of <code>P</code> and <code>T</code> into a cascading tuple.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a> → TypedSink</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#sinkFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sinkFields:cascading.tuple.Fields"></a>
+      <a id="sinkFields:Fields"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sinkFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a> → TypedSink</dd></dl></div>
     </li><li name="com.twitter.scalding.SchemedSource#sinkMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sinkMode:cascading.tap.SinkMode"></a>
       <a id="sinkMode:SinkMode"></a>
@@ -570,7 +553,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemedSource</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#skipHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#skipHeader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="skipHeader:Boolean"></a>
       <a id="skipHeader:Boolean"></a>
       <h4 class="signature">
@@ -582,8 +565,21 @@
         <span class="name">skipHeader</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → DelimitedScheme</dd></dl></div>
-    </li><li name="com.twitter.scalding.DelimitedScheme#strict" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="com.twitter.scalding.typed.TypedSource#sourceFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sourceFields:cascading.tuple.Fields"></a>
+      <a id="sourceFields:Fields"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sourceFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#strict" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="strict:Boolean"></a>
       <a id="strict:Boolean"></a>
       <h4 class="signature">
@@ -595,7 +591,7 @@
         <span class="name">strict</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DelimitedScheme</dd></dl></div>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -609,7 +605,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#template" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#template" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="template:String"></a>
       <a id="template:String"></a>
       <h4 class="signature">
@@ -621,35 +617,22 @@
         <span class="name">template</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The template to use to partition sources, based on java.</p><div class="fullcomment"><div class="comment cmt"><p>The template to use to partition sources, based on java.util.Formatter</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → <a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a></dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#templateFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="templateFields:cascading.tuple.Fields"></a>
-      <a id="templateFields:Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">templateFields</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The fields to populate the template with</p><div class="fullcomment"><div class="comment cmt"><p>The fields to populate the template with</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → <a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a></dd></dl></div>
-    </li><li name="com.twitter.scalding.FixedPathSource#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.twitter.scalding.Mappable#toIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toIterator(implicitmode:com.twitter.scalding.Mode):Iterator[T]"></a>
+      <a id="toIterator(Mode):Iterator[(P,T)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FixedPathSource → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
     </li><li name="com.twitter.scalding.Source#transformForRead" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transformForRead(pipe:&lt;?&gt;):cascading.pipe.Pipe"></a>
+      <a id="transformForRead(pipe:cascading.pipe.Pipe):cascading.pipe.Pipe"></a>
       <a id="transformForRead(Pipe):Pipe"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -662,7 +645,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Source</dd></dl></div>
     </li><li name="com.twitter.scalding.Source#transformForWrite" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transformForWrite(pipe:&lt;?&gt;):cascading.pipe.Pipe"></a>
+      <a id="transformForWrite(pipe:cascading.pipe.Pipe):cascading.pipe.Pipe"></a>
       <a id="transformForWrite(Pipe):Pipe"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -687,7 +670,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
-    </li><li name="com.twitter.scalding.DelimitedScheme#types" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#types" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="types:Array[Class[_]]"></a>
       <a id="types:Array[Class[_]]"></a>
       <h4 class="signature">
@@ -699,8 +682,8 @@
         <span class="name">types</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.Class">Class</span>[_]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DelimitedScheme</dd></dl></div>
-    </li><li name="com.twitter.scalding.FileSource#validateTaps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="com.twitter.scalding.Source#validateTaps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateTaps(mode:com.twitter.scalding.Mode):Unit"></a>
       <a id="validateTaps(Mode):Unit"></a>
       <h4 class="signature">
@@ -712,7 +695,33 @@
         <span class="name">validateTaps</span><span class="params">(<span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileSource → Source</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#valueConverter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valueConverter:com.twitter.scalding.TupleConverter[T]"></a>
+      <a id="valueConverter:TupleConverter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valueConverter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#valueSetter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valueSetter:com.twitter.scalding.TupleSetter[T]"></a>
+      <a id="valueSetter:TupleSetter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valueSetter</span><span class="result">: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -783,7 +792,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.template.TemplateCsv#writeHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#writeHeader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="writeHeader:Boolean"></a>
       <a id="writeHeader:Boolean"></a>
       <h4 class="signature">
@@ -795,7 +804,7 @@
         <span class="name">writeHeader</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.template.TemplateCsv">TemplateCsv</a> → DelimitedScheme</dd></dl></div>
+      
     </li></ol>
             </div>
 
@@ -804,7 +813,7 @@
         <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
               <ol><li name="com.twitter.scalding.Source#readAtSubmitter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="readAtSubmitter[T&lt;:&lt;?&gt;](implicitmode:&lt;?&gt;,implicitconv:&lt;?&gt;):Stream[T]"></a>
+      <a id="readAtSubmitter[T](implicitmode:com.twitter.scalding.Mode,implicitconv:com.twitter.scalding.TupleConverter[T]):Stream[T]"></a>
       <a id="readAtSubmitter[T](Mode,TupleConverter[T]):Stream[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -830,16 +839,14 @@
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
-            </div><div class="parent" name="com.cba.omnia.edge.source.template.TemplateSource">
-              <h3>Inherited from <a href="TemplateSource.html" class="extype" name="com.cba.omnia.edge.source.template.TemplateSource">TemplateSource</a></h3>
-            </div><div class="parent" name="com.twitter.scalding.DelimitedScheme">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.DelimitedScheme">DelimitedScheme</span></h3>
-            </div><div class="parent" name="com.twitter.scalding.FixedPathSource">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.FixedPathSource">FixedPathSource</span></h3>
-            </div><div class="parent" name="com.twitter.scalding.FileSource">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.FileSource">FileSource</span></h3>
-            </div><div class="parent" name="com.twitter.scalding.LocalSourceOverride">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.LocalSourceOverride">LocalSourceOverride</span></h3>
+            </div><div class="parent" name="com.cba.omnia.edge.source.partition.PartitionSchemed">
+              <h3>Inherited from <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>]</h3>
+            </div><div class="parent" name="com.twitter.scalding.Mappable">
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</h3>
+            </div><div class="parent" name="com.twitter.scalding.typed.TypedSource">
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</h3>
+            </div><div class="parent" name="com.twitter.scalding.typed.TypedSink">
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</h3>
             </div><div class="parent" name="com.twitter.scalding.SchemedSource">
               <h3>Inherited from <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span></h3>
             </div><div class="parent" name="com.twitter.scalding.Source">
