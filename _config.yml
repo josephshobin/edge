@@ -1,0 +1,4 @@
+name: edge
+exclude: [Gemfile]
+markdown: kramdown
+releaseVersion:  "2.1.0-20140714020731-d7534fb"
