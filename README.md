@@ -9,7 +9,7 @@ for use with cascading and scalding.
 
 If it is a general tool for reading or writing data with these tools it belongs here.
 
-[Scaladoc]("https://commbank.github.io/edge/latest/api/index.html")
+[Scaladoc](https://commbank.github.io/edge/latest/api/index.html)
 
 Usage
 -----
