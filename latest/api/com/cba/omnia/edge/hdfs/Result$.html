@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/510704b772a047b3ed96049578b4d6fe270f0675//src/main/scala/com/cba/omnia/edge/hdfs/Result.scala" target="_blank">Result.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c24b23cf017e66304c5639a654e3b86c7e81f11a//src/main/scala/com/cba/omnia/edge/hdfs/Result.scala" target="_blank">Result.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -292,6 +292,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.hdfs.Result#guard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="guard(ok:Boolean,message:String):com.cba.omnia.edge.hdfs.Result[Unit]"></a>
+      <a id="guard(Boolean,String):Result[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">guard</span><span class="params">(<span name="ok">ok: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Result.html" class="extype" name="com.cba.omnia.edge.hdfs.Result">Result</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fails if condition is not met</p><div class="fullcomment"><div class="comment cmt"><p>Fails if condition is not met</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -370,6 +385,21 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Smart constructor for a successful <code>Result</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Smart constructor for a successful <code>Result</code>. Provides better inference then direct use of constructor.</p></div></div>
+    </li><li name="com.cba.omnia.edge.hdfs.Result#prevent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prevent(fail:Boolean,message:String):com.cba.omnia.edge.hdfs.Result[Unit]"></a>
+      <a id="prevent(Boolean,String):Result[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prevent</span><span class="params">(<span name="fail">fail: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Result.html" class="extype" name="com.cba.omnia.edge.hdfs.Result">Result</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fails if condition is met</p><div class="fullcomment"><div class="comment cmt"><p>Fails if condition is met</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="com.cba.omnia.edge.hdfs.Result#safe" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="safe[A](thunk:=&gt;A):com.cba.omnia.edge.hdfs.Result[A]"></a>
       <a id="safe[A](⇒A):Result[A]"></a>

@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/510704b772a047b3ed96049578b4d6fe270f0675//src/main/scala/com/cba/omnia/edge/hdfs/Hdfs.scala" target="_blank">Hdfs.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c24b23cf017e66304c5639a654e3b86c7e81f11a//src/main/scala/com/cba/omnia/edge/hdfs/Hdfs.scala" target="_blank">Hdfs.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -384,6 +384,21 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#forbidden" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forbidden(action:com.cba.omnia.edge.hdfs.Hdfs[Boolean],message:String):com.cba.omnia.edge.hdfs.Hdfs[Unit]"></a>
+      <a id="forbidden(Hdfs[Boolean],String):Hdfs[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forbidden</span><span class="params">(<span name="action">action: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Ensures a Hdfs operation returning a boolean success flag fails if succeesfull</p><div class="fullcomment"><div class="comment cmt"><p>Ensures a Hdfs operation returning a boolean success flag fails if succeesfull</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -410,6 +425,21 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Get all files/directories from <code>globPattern</code>.</p>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#guard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="guard(ok:Boolean,message:String):com.cba.omnia.edge.hdfs.Hdfs[Unit]"></a>
+      <a id="guard(Boolean,String):Hdfs[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">guard</span><span class="params">(<span name="ok">ok: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fails if condition is not met</p><div class="fullcomment"><div class="comment cmt"><p>Fails if condition is not met</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -488,6 +518,21 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Read lines of a file into a list.</p>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#mandatory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mandatory(action:com.cba.omnia.edge.hdfs.Hdfs[Boolean],message:String):com.cba.omnia.edge.hdfs.Hdfs[Unit]"></a>
+      <a id="mandatory(Hdfs[Boolean],String):Hdfs[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mandatory</span><span class="params">(<span name="action">action: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Ensures a Hdfs operation returning a boolean success flag fails if unsuccessfull</p><div class="fullcomment"><div class="comment cmt"><p>Ensures a Hdfs operation returning a boolean success flag fails if unsuccessfull</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="com.cba.omnia.edge.hdfs.Hdfs#mkdirs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="mkdirs(path:org.apache.hadoop.fs.Path):com.cba.omnia.edge.hdfs.Hdfs[Boolean]"></a>
       <a id="mkdirs(Path):Hdfs[Boolean]"></a>
@@ -592,6 +637,21 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Convenience for constructing <code>Path</code> types from strings.</p>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#prevent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prevent(fail:Boolean,message:String):com.cba.omnia.edge.hdfs.Hdfs[Unit]"></a>
+      <a id="prevent(Boolean,String):Hdfs[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prevent</span><span class="params">(<span name="fail">fail: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Hdfs.html" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fails if condition is met</p><div class="fullcomment"><div class="comment cmt"><p>Fails if condition is met</p><p>Provided instead of <span class="extype" name="scalaz.MonadPlus">scalaz.MonadPlus</span> typeclass, as Hdfs does not
+quite meet the required laws.
+</p></div></div>
     </li><li name="com.cba.omnia.edge.hdfs.Hdfs#read" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="read(path:org.apache.hadoop.fs.Path,encoding:String):com.cba.omnia.edge.hdfs.Hdfs[String]"></a>
       <a id="read(Path,String):Hdfs[String]"></a>

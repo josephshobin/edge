@@ -41,7 +41,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A data-type that represents a HDFS operation.</p><p>HDFS operations use a hadoop configuration as context,
 and produce a (potentially failing) result.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/510704b772a047b3ed96049578b4d6fe270f0675//src/main/scala/com/cba/omnia/edge/hdfs/Hdfs.scala" target="_blank">Hdfs.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c24b23cf017e66304c5639a654e3b86c7e81f11a//src/main/scala/com/cba/omnia/edge/hdfs/Hdfs.scala" target="_blank">Hdfs.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -336,6 +336,20 @@ and produce a (potentially failing) result.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#or" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="or(other:=&gt;com.cba.omnia.edge.hdfs.Hdfs[A]):com.cba.omnia.edge.hdfs.Hdfs[A]"></a>
+      <a id="or(⇒Hdfs[A]):Hdfs[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">or</span><span class="params">(<span name="other">other: ⇒ <a href="" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="com.cba.omnia.edge.hdfs.Hdfs.A">A</span>]</span>)</span><span class="result">: <a href="" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="com.cba.omnia.edge.hdfs.Hdfs.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Runs the first Hdfs operation.</p><div class="fullcomment"><div class="comment cmt"><p>Runs the first Hdfs operation. If it fails, runs the second operation. Useful for chaining optional operations.</p><p>Throws away any error from the first operation.
+</p></div></div>
     </li><li name="com.cba.omnia.edge.hdfs.Hdfs#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="run:org.apache.hadoop.conf.Configuration=&gt;com.cba.omnia.edge.hdfs.Result[A]"></a>
       <a id="run:(Configuration)⇒Result[A]"></a>
@@ -458,6 +472,19 @@ and produce a (potentially failing) result.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.cba.omnia.edge.hdfs.Hdfs#|||" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="|||(other:=&gt;com.cba.omnia.edge.hdfs.Hdfs[A]):com.cba.omnia.edge.hdfs.Hdfs[A]"></a>
+      <a id="|||(⇒Hdfs[A]):Hdfs[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bar$bar$bar" class="name">|||</span><span class="params">(<span name="other">other: ⇒ <a href="" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="com.cba.omnia.edge.hdfs.Hdfs.A">A</span>]</span>)</span><span class="result">: <a href="" class="extype" name="com.cba.omnia.edge.hdfs.Hdfs">Hdfs</a>[<span class="extype" name="com.cba.omnia.edge.hdfs.Hdfs.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Alias for <code>or</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Alias for <code>or</code>. Provides nice syntax: <code>Hdfs.create(&quot;bad path&quot;) ||| Hdfs.create(&quot;good path&quot;)</code></p></div></div>
     </li></ol>
             </div>
 
