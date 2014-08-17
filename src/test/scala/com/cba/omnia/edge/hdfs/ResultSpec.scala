@@ -36,10 +36,12 @@ Result should:
   getOrElse should always return else for Error   $getOrElseError
   ||| is alias for `or`                           $orAlias
   or returns first Ok                             $orFirstOk
-  or returns first Error                          $orFirstError
+  or skips first Error                            $orFirstError
   setMessage on Ok is noop                        $setMessageOk
   setMessage on Error always sets message         $setMessageError
   setMessage maintains any Throwable              $setMessageMaintainsThrowable
+  guard success iif condition is true             $guardMeansTrue
+  prevent success iif condition is false          $preventMeansFalse
 
 """
 
@@ -84,6 +86,25 @@ Result should:
 
   def setMessageMaintainsThrowable = prop((x: These[String, Throwable], message: String) =>
     Result.these(x).setMessage(message).toError.flatMap(_.b) must_== x.b)
+
+  def guardMeansTrue = {
+    Result.guard(true, "") must beLike {
+      case Ok(_) => ok
+    }
+    Result.guard(false, "") must beLike {
+      case Error(_) => ok
+    }
+  }
+
+  def preventMeansFalse = {
+    Result.prevent(true, "") must beLike {
+      case Error(_) => ok
+    }
+    Result.prevent(false, "") must beLike {
+      case Ok(_) => ok
+    }
+  }
+
 
   /** Note this is not general purpose, specific to testing laws. */
 

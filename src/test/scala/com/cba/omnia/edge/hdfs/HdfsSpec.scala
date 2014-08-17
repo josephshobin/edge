@@ -15,9 +15,6 @@
 package com.cba.omnia.edge
 package hdfs
 
-import test.Identifier
-import test.Data._
-
 import scalaz._, Scalaz._
 import scalaz.scalacheck.ScalazArbitrary._
 import scalaz.scalacheck.ScalazProperties._
@@ -28,17 +25,28 @@ import org.apache.avro.Schema
 import java.io.File
 import java.io.FileWriter
 
+import com.cba.omnia.edge.test.Identifier
+import com.cba.omnia.edge.test.Data._
+import com.cba.omnia.edge.test.Arbitraries._
+
 class HdfsSpec extends test.ScaldingSpec { def is = s2"""
 Hdfs Operations
 ===============
 
 Hdfs operations should:
   obey monad laws                                 $laws
+  ||| is alias for `or`                           $orAlias
+  or stops at first succeess                      $orFirstOk
+  or continues at first Error                     $orFirstError
+  mandatory success iif result is true            $mandatoryMeansTrue
+  forbidden success iif result is false           $forbiddenMeansFalse
 
 Hdfs construction:
   result is constant                              $result
   hdfs handles exceptions                         $safeHdfs
   value handles exceptions                        $safeValue
+  guard success iif condition is true             $guardMeansTrue
+  prevent success iif condition is false          $preventMeansFalse
 
 Hdfs io:
   isFile should always be false on new path       $isFile
@@ -62,8 +70,39 @@ Hdfs avro:
   can read / write avro records                   $avro
 
 """
+
   def laws =
     monad.laws[Hdfs]
+
+  def orAlias = prop((x: Hdfs[Int], y: Hdfs[Int]) =>
+    (x ||| y).run(new Configuration) must_== (x or y).run(new Configuration))
+
+  def orFirstOk = prop((x: Int, y: Hdfs[Int]) =>
+    (Hdfs.result(Result.ok(x)) ||| y).run(new Configuration) must_==
+      Hdfs.result(Result.ok(x)).run(new Configuration))
+
+  def orFirstError = prop((x: String, y: Hdfs[Int]) =>
+    (Hdfs.fail(x) ||| y).run(new Configuration) must_== y.run(new Configuration))
+
+  def mandatoryMeansTrue = prop((x: Hdfs[Boolean], msg: String) => {
+    val runit = Hdfs.mandatory(x, msg).run(new Configuration)
+    val rbool = x.run(new Configuration)
+    (runit, rbool) must beLike {
+      case (Ok(_), Ok(true))     => ok
+      case (Error(_), Ok(false)) => ok
+      case (Error(_), Error(_))  => ok
+    }
+  })
+
+  def forbiddenMeansFalse = prop((x: Hdfs[Boolean], msg: String) => {
+    val runit = Hdfs.forbidden(x, msg).run(new Configuration)
+    val rbool = x.run(new Configuration)
+    (runit, rbool) must beLike {
+      case (Ok(_), Ok(false))   => ok
+      case (Error(_), Ok(rue))  => ok
+      case (Error(_), Error(_)) => ok
+    }
+  })
 
   def result = prop((v: Result[Int]) =>
     Hdfs.result(v) must beResult { v })
@@ -82,6 +121,24 @@ Hdfs avro:
 
   def safeValue = prop((t: Throwable) =>
     Hdfs.value(throw t) must beResult { Result.exception(t) })
+
+  def guardMeansTrue = {
+    Hdfs.guard(true, "").run(new Configuration) must beLike {
+      case Ok(_) => ok
+    }
+    Hdfs.guard(false, "").run(new Configuration) must beLike {
+      case Error(_) => ok
+    }
+  }
+
+  def preventMeansFalse = {
+    Hdfs.prevent(true, "").run(new Configuration) must beLike {
+      case Error(_) => ok
+    }
+    Hdfs.prevent(false, "").run(new Configuration) must beLike {
+      case Ok(_) => ok
+    }
+  }
 
   def isFile = prop((p: Path) =>
     Hdfs.isFile(p) must beValue { false })
@@ -158,7 +215,7 @@ Hdfs avro:
         path -> scala.io.Source.fromFile(file)(scala.io.Codec.ISO8859).mkString
       }) must containTheSameElementsAs(written)
   })
-  
+
   def copyFromLocalFile = prop { (p: Path, content: String) =>
     val f = File.createTempFile("local", ".txt")
     val w = new FileWriter(f)

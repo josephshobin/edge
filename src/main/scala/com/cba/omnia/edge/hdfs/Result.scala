@@ -68,7 +68,7 @@ sealed trait Result[A] {
   def getOrElse(els: => A): A =
     toOption.getOrElse(els)
 
-  /** Take the first successful result. Useful for chaning optional operations. */
+  /** Take the first successful result. Useful for chaining optional operations. */
   def or(other: => Result[A]): Result[A] =
     fold(Result.ok, _ => other)
 
@@ -115,6 +115,24 @@ object Result {
   /** Smart constructor for a failing case with only an exception. */
   def exception[A](t: Throwable): Result[A] =
     these(That(t))
+
+  /**
+    * Fails if condition is not met
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def guard(ok: Boolean, message: String): Result[Unit] =
+    if (ok) Result.ok[Unit](()) else fail[Unit](message)
+
+  /**
+    * Fails if condition is met
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def prevent(fail: Boolean, message: String): Result[Unit] =
+    guard(!fail, message)
 
   implicit def ResultMonad: Monad[Result] = new Monad[Result] {
     def point[A](v: => A) = ok(v)

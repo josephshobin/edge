@@ -62,6 +62,18 @@ case class Hdfs[A](run: Configuration => Result[A]) {
   /** Set the error message in a failure case. Useful for providing contextual information without having to inspect result. */
   def setMessage(message: String) =
     Hdfs(c => run(c).setMessage(message))
+
+  /**
+    * Runs the first Hdfs operation. If it fails, runs the second operation. Useful for chaining optional operations.
+    *
+    * Throws away any error from the first operation.
+    */
+  def or(other: => Hdfs[A]): Hdfs[A] =
+    Hdfs(c => run(c).fold(Result.ok, _ => other.run(c)))
+
+  /** Alias for `or`. Provides nice syntax: `Hdfs.create("bad path") ||| Hdfs.create("good path")` */
+  def |||(other: => Hdfs[A]): Hdfs[A] =
+    or(other)
 }
 
 object Hdfs {
@@ -80,6 +92,42 @@ object Hdfs {
   /** Build a failed HDFS operation from the specified exception and message. */
   def error[A](message: String, t: Throwable): Hdfs[A] =
     result(Result.error(message, t))
+
+  /**
+    * Fails if condition is not met
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def guard(ok: Boolean, message: String): Hdfs[Unit] =
+    result(Result.guard(ok, message))
+
+  /**
+    * Fails if condition is met
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def prevent(fail: Boolean, message: String): Hdfs[Unit] =
+    result(Result.prevent(fail, message))
+
+  /**
+    * Ensures a Hdfs operation returning a boolean success flag fails if unsuccessfull
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def mandatory(action: Hdfs[Boolean], message: String): Hdfs[Unit] =
+    action flatMap (guard(_, message))
+
+  /**
+    * Ensures a Hdfs operation returning a boolean success flag fails if succeesfull
+    *
+    * Provided instead of [[scalaz.MonadPlus]] typeclass, as Hdfs does not
+    * quite meet the required laws.
+    */
+  def forbidden(action: Hdfs[Boolean], message: String): Hdfs[Unit] =
+    action flatMap (prevent(_, message))
 
   /** Build a HDFS operation from a function. The resultant HDFS operation will not throw an exception. */
   def hdfs[A](f: Configuration => A): Hdfs[A] =
@@ -156,7 +204,7 @@ object Hdfs {
     filesystem.safeMap(_.copyToLocalFile(hdfsPath, new Path(localPath.getAbsolutePath)))
       .as(localPath)
       .setMessage(s"Could not download $hdfsPath to $localPath")
-	  
+
   /** Copy file from the local filesystem at `localPath` to `hdfsPath` on HDFS*/
   def copyFromLocalFile(localPath: File, hdfsPath: Path): Hdfs[Path] =
     filesystem.safeMap(_.copyFromLocalFile(new Path(localPath.getAbsolutePath), hdfsPath))
