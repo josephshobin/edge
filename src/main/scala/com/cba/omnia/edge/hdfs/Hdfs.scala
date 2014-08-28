@@ -19,7 +19,7 @@ import com.cba.omnia.edge.io.Streams
 import scala.util.control.NonFatal
 import scalaz._, Scalaz._
 import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.{FileSystem, Path, FSDataInputStream, FSDataOutputStream}
+import org.apache.hadoop.fs.{ChecksumFileSystem, FileSystem, Path, FSDataInputStream, FSDataOutputStream}
 import org.apache.avro.file.{DataFileReader, DataFileWriter}
 import org.apache.avro.io.{DatumReader, DatumWriter}
 import org.apache.avro.mapred.FsInput
@@ -201,7 +201,16 @@ object Hdfs {
 
   /** Downloads file at `hdfsPath` from HDFS to `localPath` on the local filesystem */
   def copyToLocalFile(hdfsPath: Path, localPath: File): Hdfs[File] =
-    filesystem.safeMap(_.copyToLocalFile(hdfsPath, new Path(localPath.getAbsolutePath)))
+    filesystem.safeMap(_ match {
+      case cfs : ChecksumFileSystem => {
+        val dest = new Path(localPath.getAbsolutePath)
+        val checksumFile = cfs.getChecksumFile(dest)
+        cfs.copyToLocalFile(hdfsPath, dest)
+        if (cfs.exists(checksumFile)) cfs.delete(checksumFile, false)
+      }
+      case fs =>
+        fs.copyToLocalFile(hdfsPath, new Path(localPath.getAbsolutePath))
+    })
       .as(localPath)
       .setMessage(s"Could not download $hdfsPath to $localPath")
 

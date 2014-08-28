@@ -62,6 +62,7 @@ Hdfs io:
   can get paths from a glob pattern               $glob
   read / write lines should be like String#lines  $lines
   copy to local file should download the file     $copyToLocalFile
+  copy to local file should not create crc        $copyToLocalFileNoCrc
   copy to temp local should download the files    $copyToTempLocal
   copy from local file should download the file   $copyFromLocalFile
 
@@ -200,6 +201,21 @@ Hdfs avro:
     case (written, local: File) =>
       scala.io.Source.fromFile(local)(scala.io.Codec.ISO8859).mkString must equalTo(written)
   })
+
+  def copyToLocalFileNoCrc = prop((hdfsSrc: Path, data: String) => (for {
+    remote     <- Hdfs.create(hdfsSrc)
+    _          <- Hdfs.value({ remote.writeBytes(data); remote.close() })
+    written    <- Hdfs.read(hdfsSrc, "ISO8859_1")
+    local       = File.createTempFile("local", ".test")
+    _           = local.delete()
+    _          <- Hdfs.copyToLocalFile(hdfsSrc, local)
+    _           = local.deleteOnExit()
+    crc         = new File(local.getParent, "." + local.getName + ".crc")
+    _          <- Hdfs.withFilesystem(_.delete(hdfsSrc, false))
+  } yield (crc)) must beValueLike {
+    case (crc: File) => crc.isFile must beFalse
+  })
+
 
   def copyToTempLocal = prop((srcs: List[(Path, String)]) => (for {
     remotes    <- srcs.map({ case (path, data) =>
