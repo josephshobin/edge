@@ -21,12 +21,9 @@ import com.twitter.scalding.typed.IterablePipe
 
 import org.apache.hadoop.fs.Path
 
-import com.cba.omnia.edge._
-import com.cba.omnia.edge.hdfs.Hdfs
-import com.cba.omnia.edge.hdfs.{Result, Ok, Error}
-import com.cba.omnia.edge.hdfs.HdfsString._
-import com.cba.omnia.edge.test.ScaldingSpec
+import au.com.cba.omnia.permafrost.hdfs.Hdfs
 
+import com.cba.omnia.edge.test.ScaldingSpec
 
 class PartitionedTextLineSpec extends ScaldingSpec { def is =s2"""
 

@@ -26,9 +26,6 @@ import cascading.tuple.Fields
 import com.twitter.scalding._
 import com.twitter.scalding.typed._
 
-import hdfs.Hdfs.mkdirs
-import hdfs.HdfsString._
-
 /**
  * This is a primitive trait to mixin in to enable cascading's TemplateTap.
  *
@@ -70,7 +67,6 @@ trait TemplateSource extends FileSource {
       case (hdfsMode @ Hdfs(_, _), Read) =>
         createHdfsReadTap(hdfsMode)
       case (Hdfs(_, c), Write) =>
-        mkdirs(hdfsWritePath.toPath).run(c)
         val hfs = new Hfs(hdfsScheme, hdfsWritePath, SinkMode.REPLACE)
         new TemplateTap(hfs, template, templateFields)
       case (_, _) =>

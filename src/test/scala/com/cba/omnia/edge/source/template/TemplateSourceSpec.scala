@@ -15,20 +15,20 @@
 package com.cba.omnia.edge
 package source.template
 
-import com.twitter.scalding._
-import com.twitter.scalding.TDsl._
+import com.twitter.scalding._, TDsl._
+
+import scalaz._, Scalaz._
+
+import org.apache.hadoop.fs.Path
 
 import org.specs2._
 import org.specs2.execute._
 import org.specs2.matcher._
-import org.apache.hadoop.fs.Path
 
-import com.cba.omnia.edge.hdfs.Hdfs
-import com.cba.omnia.edge.hdfs.{Result, Ok, Error}
-import com.cba.omnia.edge.hdfs.HdfsString._
+import au.com.cba.omnia.permafrost.hdfs.Hdfs
+
 import com.cba.omnia.edge.source.memory._
 
-import scalaz._, Scalaz._
 
 class TemplateSourceSpec extends test.ScaldingSpec { def is = s2"""
 Template Source

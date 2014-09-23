@@ -21,7 +21,9 @@ import com.twitter.maple.tap.TupleMemoryInputFormat, TupleMemoryInputFormat.TUPL
 import org.apache.hadoop.mapred._
 import scala.collection.JavaConverters._
 
-class DistributableMemoryInputFormatSpec extends test.Spec { def is = s2"""
+import au.com.cba.omnia.permafrost.test.Spec
+
+class DistributableMemoryInputFormatSpec extends Spec { def is = s2"""
 Distributable Memory Input Format
 =================================
 

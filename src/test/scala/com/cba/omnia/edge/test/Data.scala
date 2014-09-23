@@ -16,21 +16,17 @@ package com.cba.omnia.edge
 package test
 
 import cascading.tuple.Tuple
-import com.cba.omnia.edge.hdfs._
+
 import org.apache.hadoop.mapred._
+
 import org.scalacheck._, Arbitrary._, Gen._
+
 import scalaz.\&/._
 import scalaz.scalacheck.ScalazProperties._
 import scalaz.scalacheck.ScalazArbitrary._
 
 object Data {
   lazy val PathId = new java.util.concurrent.atomic.AtomicInteger(0)
-
-  implicit def ResultAribtary[A: Arbitrary]: Arbitrary[Result[A]] =
-    Arbitrary(arbitrary[Either[These[String, Throwable], A]] map {
-      case Left(v)  => Error(v)
-      case Right(v) => Ok(v)
-    })
 
   def tuples(size: Int): List[Tuple] =
     (1 to size).map(v => {
@@ -47,19 +43,7 @@ object Data {
     ).mkString(","))
     conf
   }
-
-  def order(n: Int, m: Int) =
-    (math.min(n, m), math.max(n, m))
 }
-
-
-case class Identifier(value: String)
-
-object Identifier {
-  implicit def IdentifierArbitrary: Arbitrary[Identifier] =
-    Arbitrary(identifier map (Identifier.apply))
-}
-
 
 case class Percentage(percent: Float) {
   def of(n: Int) =
