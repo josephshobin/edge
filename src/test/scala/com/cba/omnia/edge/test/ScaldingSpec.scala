@@ -23,6 +23,8 @@ import org.specs2._
 import org.specs2.matcher._
 import org.specs2.specification.{Fragments, Step, After}
 
+import au.com.cba.omnia.permafrost.test.{Spec, ConfigurationContext, UniqueContext, HdfsMatchers}
+
 /**
  * A base specification class for scalding/hdfs related testing.
  *

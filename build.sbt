@@ -19,14 +19,10 @@ uniformDependencySettings
 libraryDependencies :=
   depend.scaldingproject() ++
   depend.scalaz() ++
-  depend.shapeless() ++
-  Seq(
-    "com.twitter"      %% "scalding-avro"      % depend.versions.scalding
+  depend.shapeless() ++ Seq(
+    "au.com.cba.omnia" %% "permafrost" % "0.0.1-20140923052449-c061f38-CDH5" % "test",
+    "au.com.cba.omnia" %% "permafrost" % "0.0.1-20140923052449-c061f38-CDH5" % "test" classifier "tests"
   )
-
-uniformAssemblySettings
-
-publishArtifact in Test := true
 
 uniform.docSettings("https://github.com/CommBank/edge")
 

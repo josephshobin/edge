@@ -17,10 +17,12 @@ package codec
 
 import org.scalacheck._, Arbitrary.arbitrary
 
+import au.com.cba.omnia.permafrost.test.Spec
+
 import Codec._
 import Codec.auto._
 
-object CodecSpec extends test.Spec { def is = s2"""
+object CodecSpec extends Spec { def is = s2"""
 Codec Spec
 ==========
 
