@@ -62,8 +62,6 @@ PartitionedTsv
         actual.toSet must_== vs.map { case (k, v) => v._1 + "\t" + v._2 }.toSet
       }
     })
-
     ok
   }
 }
-
