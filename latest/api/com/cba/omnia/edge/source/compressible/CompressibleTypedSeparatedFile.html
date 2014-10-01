@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>DistributableMemoryInputFormat - com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat</title>
-          <meta name="description" content="DistributableMemoryInputFormat - com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat" />
-          <meta name="keywords" content="DistributableMemoryInputFormat com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat" />
+          <title>CompressibleTypedSeparatedFile - com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile</title>
+          <meta name="description" content="CompressibleTypedSeparatedFile - com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile" />
+          <meta name="keywords" content="CompressibleTypedSeparatedFile com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
-            var hash = 'com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat';
+            var hash = 'com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,24 +24,27 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="DistributableMemoryInputFormat$.html" title="Go to companion"><img src="../../../../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a>.<a href="package.html" class="extype" name="com.cba.omnia.edge.source.memory">memory</a></p>
-        <h1><a href="DistributableMemoryInputFormat$.html" title="Go to companion">DistributableMemoryInputFormat</a></h1>
+        <img src="../../../../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a>.<a href="package.html" class="extype" name="com.cba.omnia.edge.source.compressible">compressible</a></p>
+        <h1>CompressibleTypedSeparatedFile</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">DistributableMemoryInputFormat</span><span class="result"> extends <span class="extype" name="com.twitter.maple.tap.TupleMemoryInputFormat">TupleMemoryInputFormat</span></span>
+        <span class="name">CompressibleTypedSeparatedFile</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.TypedSeperatedFile">TypedSeperatedFile</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c1c6dadda6642540c205224562128b4f08dd9f6e//src/main/scala/com/cba/omnia/edge/source/memory/DistributableMemoryInputFormat.scala" target="_blank">DistributableMemoryInputFormat.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A trait for defining compressible typed delimited source factories</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c1c6dadda6642540c205224562128b4f08dd9f6e//src/main/scala/com/cba/omnia/edge/source/compressible/CompressibleTypedDelimited.scala" target="_blank">CompressibleTypedDelimited.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.maple.tap.TupleMemoryInputFormat">TupleMemoryInputFormat</span>, <span class="extype" name="org.apache.hadoop.mapred.InputFormat">InputFormat</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.scalding.TypedSeperatedFile">TypedSeperatedFile</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="CompressibleTypedCsv$.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedCsv">CompressibleTypedCsv</a>, <a href="CompressibleTypedOsv$.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedOsv">CompressibleTypedOsv</a>, <a href="CompressibleTypedPsv$.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedPsv">CompressibleTypedPsv</a>, <a href="CompressibleTypedTsv$.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedTsv">CompressibleTypedTsv</a></div>
         </div></div>
         
 
@@ -59,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat"><span>DistributableMemoryInputFormat</span></li><li class="in" name="com.twitter.maple.tap.TupleMemoryInputFormat"><span>TupleMemoryInputFormat</span></li><li class="in" name="org.apache.hadoop.mapred.InputFormat"><span>InputFormat</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile"><span>CompressibleTypedSeparatedFile</span></li><li class="in" name="com.twitter.scalding.TypedSeperatedFile"><span>TypedSeperatedFile</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -77,30 +80,30 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat"></a>
-      <a id="&lt;init&gt;:DistributableMemoryInputFormat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">DistributableMemoryInputFormat</span><span class="params">()</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
-
         
 
         
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Abstract Value Members</h3>
+              <ol><li name="com.twitter.scalding.TypedSeperatedFile#separator" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="separator:String"></a>
+      <a id="separator:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">separator</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -166,6 +169,58 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](paths:Seq[String],f:cascading.tuple.Fields)(implicitevidence$1:Manifest[T],implicitevidence$2:com.twitter.scalding.TupleConverter[T],implicitevidence$3:com.twitter.scalding.TupleSetter[T]):com.twitter.scalding.TypedDelimited[T]"></a>
+      <a id="apply[T](Seq[String],Fields)(Manifest[T],TupleConverter[T],TupleSetter[T]):TypedDelimited[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="paths">paths: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile.apply.T">T</span>]</span>, <span name="arg1">arg1: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile.apply.T">T</span>]</span>, <span name="arg2">arg2: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile.apply.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TypedDelimited">TypedDelimited</span>[<span class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile.apply.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile">CompressibleTypedSeparatedFile</a> → TypedSeperatedFile</dd></dl></div>
+    </li><li name="com.twitter.scalding.TypedSeperatedFile#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](path:String,f:cascading.tuple.Fields)(implicitevidence$7:Manifest[T],implicitevidence$8:com.twitter.scalding.TupleConverter[T],implicitevidence$9:com.twitter.scalding.TupleSetter[T]):com.twitter.scalding.TypedDelimited[T]"></a>
+      <a id="apply[T](String,Fields)(Manifest[T],TupleConverter[T],TupleSetter[T]):TypedDelimited[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg1">arg1: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg2">arg2: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TypedDelimited">TypedDelimited</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
+    </li><li name="com.twitter.scalding.TypedSeperatedFile#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](paths:Seq[String])(implicitevidence$4:Manifest[T],implicitevidence$5:com.twitter.scalding.TupleConverter[T],implicitevidence$6:com.twitter.scalding.TupleSetter[T]):com.twitter.scalding.TypedDelimited[T]"></a>
+      <a id="apply[T](Seq[String])(Manifest[T],TupleConverter[T],TupleSetter[T]):TypedDelimited[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="paths">paths: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg1">arg1: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg2">arg2: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TypedDelimited">TypedDelimited</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
+    </li><li name="com.twitter.scalding.TypedSeperatedFile#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](path:String)(implicitevidence$1:Manifest[T],implicitevidence$2:com.twitter.scalding.TupleConverter[T],implicitevidence$3:com.twitter.scalding.TupleSetter[T]):com.twitter.scalding.TypedDelimited[T]"></a>
+      <a id="apply[T](String)(Manifest[T],TupleConverter[T],TupleSetter[T]):TypedDelimited[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg1">arg1: <span class="extype" name="com.twitter.scalding.TupleConverter">TupleConverter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>, <span name="arg2">arg2: <span class="extype" name="com.twitter.scalding.TupleSetter">TupleSetter</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.TypedDelimited">TypedDelimited</span>[<span class="extype" name="com.twitter.scalding.TypedSeperatedFile.apply.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -256,32 +311,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat#getRecordReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getRecordReader(split:org.apache.hadoop.mapred.InputSplit,conf:org.apache.hadoop.mapred.JobConf,reporter:org.apache.hadoop.mapred.Reporter):org.apache.hadoop.mapred.RecordReader[com.twitter.maple.tap.TupleWrapper,org.apache.hadoop.io.NullWritable]"></a>
-      <a id="getRecordReader(InputSplit,JobConf,Reporter):RecordReader[TupleWrapper,NullWritable]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRecordReader</span><span class="params">(<span name="split">split: <span class="extype" name="org.apache.hadoop.mapred.InputSplit">InputSplit</span></span>, <span name="conf">conf: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>, <span name="reporter">reporter: <span class="extype" name="org.apache.hadoop.mapred.Reporter">Reporter</span></span>)</span><span class="result">: <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat">DistributableMemoryInputFormat</a> → TupleMemoryInputFormat → InputFormat</dd></dl></div>
-    </li><li name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat#getSplits" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSplits(conf:org.apache.hadoop.mapred.JobConf,n:Int):Array[org.apache.hadoop.mapred.InputSplit]"></a>
-      <a id="getSplits(JobConf,Int):Array[InputSplit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSplits</span><span class="params">(<span name="conf">conf: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.apache.hadoop.mapred.InputSplit">InputSplit</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.memory.DistributableMemoryInputFormat">DistributableMemoryInputFormat</a> → TupleMemoryInputFormat → InputFormat</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -347,6 +376,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.twitter.scalding.TypedSeperatedFile#skipHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipHeader:Boolean"></a>
+      <a id="skipHeader:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipHeader</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -430,6 +472,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.twitter.scalding.TypedSeperatedFile#writeHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeHeader:Boolean"></a>
+      <a id="writeHeader:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeHeader</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSeperatedFile</dd></dl></div>
     </li></ol>
             </div>
 
@@ -439,10 +494,10 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.twitter.maple.tap.TupleMemoryInputFormat">
-              <h3>Inherited from <span class="extype" name="com.twitter.maple.tap.TupleMemoryInputFormat">TupleMemoryInputFormat</span></h3>
-            </div><div class="parent" name="org.apache.hadoop.mapred.InputFormat">
-              <h3>Inherited from <span class="extype" name="org.apache.hadoop.mapred.InputFormat">InputFormat</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>]</h3>
+        <div class="parent" name="com.twitter.scalding.TypedSeperatedFile">
+              <h3>Inherited from <span class="extype" name="com.twitter.scalding.TypedSeperatedFile">TypedSeperatedFile</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

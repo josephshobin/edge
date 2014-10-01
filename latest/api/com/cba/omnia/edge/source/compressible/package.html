@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>compressible - com.cba.omnia.edge.source.compressible</title>
+          <meta name="description" content="compressible - com.cba.omnia.edge.source.compressible" />
+          <meta name="keywords" content="compressible com.cba.omnia.edge.source.compressible" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.cba.omnia.edge.source.compressible.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.cba">cba</a>.<a href="../../../package.html" class="extype" name="com.cba.omnia">omnia</a>.<a href="../../package.html" class="extype" name="com.cba.omnia.edge">edge</a>.<a href="../package.html" class="extype" name="com.cba.omnia.edge.source">source</a></p>
+        <h1>compressible</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compressible</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedDelimited" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedDelimited[T]extendsTypedDelimited[T]"></a>
+      <a id="CompressibleTypedDelimited[T]:CompressibleTypedDelimited[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedDelimited.html"><span class="name">CompressibleTypedDelimited</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.TypedDelimited">TypedDelimited</span>[<span class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedDelimited.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A typed delimited source which obeys hadoop compression options</p>
+    </li><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedSeparatedFileextendsTypedSeperatedFile"></a>
+      <a id="CompressibleTypedSeparatedFile:CompressibleTypedSeparatedFile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedSeparatedFile.html"><span class="name">CompressibleTypedSeparatedFile</span></a><span class="result"> extends <span class="extype" name="com.twitter.scalding.TypedSeperatedFile">TypedSeperatedFile</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait for defining compressible typed delimited source factories</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedCsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedCsv"></a>
+      <a id="CompressibleTypedCsv:CompressibleTypedCsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedCsv$.html"><span class="name">CompressibleTypedCsv</span></a><span class="result"> extends <a href="CompressibleTypedSeparatedFile.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile">CompressibleTypedSeparatedFile</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A factory for producing typed comma-separated sources which obey hadoop compression options</p>
+    </li><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedOsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedOsv"></a>
+      <a id="CompressibleTypedOsv:CompressibleTypedOsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedOsv$.html"><span class="name">CompressibleTypedOsv</span></a><span class="result"> extends <a href="CompressibleTypedSeparatedFile.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile">CompressibleTypedSeparatedFile</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A factory for producing typed SOH-separated sources which obey hadoop compression options</p>
+    </li><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedPsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedPsv"></a>
+      <a id="CompressibleTypedPsv:CompressibleTypedPsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedPsv$.html"><span class="name">CompressibleTypedPsv</span></a><span class="result"> extends <a href="CompressibleTypedSeparatedFile.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile">CompressibleTypedSeparatedFile</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A factory for producing typed pipe-separated sources which obey hadoop compression options</p>
+    </li><li name="com.cba.omnia.edge.source.compressible.CompressibleTypedTsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressibleTypedTsv"></a>
+      <a id="CompressibleTypedTsv:CompressibleTypedTsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressibleTypedTsv$.html"><span class="name">CompressibleTypedTsv</span></a><span class="result"> extends <a href="CompressibleTypedSeparatedFile.html" class="extype" name="com.cba.omnia.edge.source.compressible.CompressibleTypedSeparatedFile">CompressibleTypedSeparatedFile</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A factory for producing typed tab-separated sources which obey hadoop compression options</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+    </body>
+      </html>

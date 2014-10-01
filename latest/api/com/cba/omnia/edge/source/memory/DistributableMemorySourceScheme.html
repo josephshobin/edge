@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/23c5c815f9277e80ea6003aee1282a52f1e4e0a6//src/main/scala/com/cba/omnia/edge/source/memory/DistributableMemorySourceScheme.scala" target="_blank">DistributableMemorySourceScheme.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/c1c6dadda6642540c205224562128b4f08dd9f6e//src/main/scala/com/cba/omnia/edge/source/memory/DistributableMemorySourceScheme.scala" target="_blank">DistributableMemorySourceScheme.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="com.twitter.maple.tap.MemorySourceTap.MemorySourceScheme">MemorySourceScheme</span>, <span class="extype" name="cascading.scheme.Scheme">Scheme</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>, <span class="extype" name="org.apache.hadoop.mapred.RecordReader">RecordReader</span>[<span class="extype" name="com.twitter.maple.tap.TupleWrapper">TupleWrapper</span>, <span class="extype" name="org.apache.hadoop.io.NullWritable">NullWritable</span>], <span class="extype" name="java.lang.Void">Void</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>], <span class="extype" name="java.lang.Void">Void</span>], <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -439,15 +439,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="cascading.scheme.Scheme#presentSinkFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="presentSinkFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap[_,_,_],x$3:cascading.tuple.Fields):Unit"></a>
-      <a id="presentSinkFields(FlowProcess[JobConf],Tap[_,_,_],Fields):Unit"></a>
+      <a id="presentSinkFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap,x$3:cascading.tuple.Fields):Unit"></a>
+      <a id="presentSinkFields(FlowProcess[JobConf],Tap,Fields):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span></span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -465,15 +465,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../cascading$scheme.html" class="extype" name="cascading.scheme">cascading.scheme</a>] </dd><dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
     </li><li name="cascading.scheme.Scheme#presentSourceFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="presentSourceFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap[_,_,_],x$3:cascading.tuple.Fields):Unit"></a>
-      <a id="presentSourceFields(FlowProcess[JobConf],Tap[_,_,_],Fields):Unit"></a>
+      <a id="presentSourceFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap,x$3:cascading.tuple.Fields):Unit"></a>
+      <a id="presentSourceFields(FlowProcess[JobConf],Tap,Fields):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">presentSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">presentSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span></span>, <span name="arg2">arg2: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
@@ -491,28 +491,28 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../cascading$scheme.html" class="extype" name="cascading.scheme">cascading.scheme</a>] </dd><dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
     </li><li name="cascading.scheme.Scheme#retrieveSinkFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="retrieveSinkFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap[_,_,_]):cascading.tuple.Fields"></a>
-      <a id="retrieveSinkFields(FlowProcess[JobConf],Tap[_,_,_]):Fields"></a>
+      <a id="retrieveSinkFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap):cascading.tuple.Fields"></a>
+      <a id="retrieveSinkFields(FlowProcess[JobConf],Tap):Fields"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retrieveSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">retrieveSinkFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
     </li><li name="cascading.scheme.Scheme#retrieveSourceFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="retrieveSourceFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap[_,_,_]):cascading.tuple.Fields"></a>
-      <a id="retrieveSourceFields(FlowProcess[JobConf],Tap[_,_,_]):Fields"></a>
+      <a id="retrieveSourceFields(x$1:cascading.flow.FlowProcess[Config],x$2:cascading.tap.Tap):cascading.tuple.Fields"></a>
+      <a id="retrieveSourceFields(FlowProcess[JobConf],Tap):Fields"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retrieveSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span>[_, _, _]</span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">retrieveSourceFields</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="cascading.flow.FlowProcess">FlowProcess</span>[<span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cascading.tap.Tap">Tap</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Scheme</dd></dl></div>
