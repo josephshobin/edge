@@ -172,8 +172,8 @@ object Hdfs {
     withFilesystem(_.create(path))
 
   /** Delete the specified path on HDFS */
-  def delete(path: Path): Hdfs[Boolean] =
-    withFilesystem(_.delete(path, true)).setMessage(s"Could not delete path $path")
+  def delete(path: Path, recDelete: Boolean=false): Hdfs[Boolean] =
+    withFilesystem(_.delete(path, recDelete)).setMessage(s"Could not delete path $path")
 
   /** Create directory on HDFS with specified `path`. */
   def mkdirs(path: Path): Hdfs[Boolean] =
