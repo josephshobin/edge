@@ -15,9 +15,11 @@
 package com.cba.omnia.edge
 package source.memory
 
+import au.com.cba.omnia.permafrost.test.Spec
+
 import test.Writables._
 
-class DistributableMemoryInputSplitSpec extends test.Spec { def is = s2"""
+class DistributableMemoryInputSplitSpec extends Spec { def is = s2"""
 Distributable Memory Input Split
 ================================
 

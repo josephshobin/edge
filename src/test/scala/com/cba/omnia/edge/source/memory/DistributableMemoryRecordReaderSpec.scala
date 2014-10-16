@@ -23,8 +23,9 @@ import java.io._
 import org.apache.hadoop.io.NullWritable
 import scala.collection.JavaConverters._
 
+import au.com.cba.omnia.permafrost.test.Spec
 
-class DistributableMemoryRecordReaderSpec extends test.Spec { def is = s2"""
+class DistributableMemoryRecordReaderSpec extends Spec { def is = s2"""
 Distributable Memory Record Reader
 ==================================
 

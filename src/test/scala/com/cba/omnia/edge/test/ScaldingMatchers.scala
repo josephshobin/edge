@@ -17,10 +17,12 @@ package test
 
 import com.twitter.scalding._
 
-import com.twitter.scalding._
 import org.apache.hadoop.conf.Configuration
+
 import org.specs2.matcher.Matcher
 import org.specs2.execute.{Result => SpecResult}
+
+import au.com.cba.omnia.permafrost.test.{Spec, ConfigurationContext}
 
 /**
  * This trait is designed to be mixed into a base Specification
