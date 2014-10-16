@@ -25,8 +25,9 @@ import org.apache.hadoop.fs.Path
 import com.twitter.scalding.{Args, Job, Mode, Hdfs => HdfsMode}
 import com.twitter.scalding.typed.IterablePipe
 
-import com.cba.omnia.edge.hdfs.Hdfs
-import com.cba.omnia.edge.io.Streams
+import au.com.cba.omnia.permafrost.hdfs.Hdfs
+import au.com.cba.omnia.permafrost.io.Streams
+
 import com.cba.omnia.edge.test.ScaldingSpec
 
 class CompressibleTypedDelimitedSpec extends ScaldingSpec { def is =s2"""
