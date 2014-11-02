@@ -20,8 +20,8 @@ libraryDependencies :=
   depend.scaldingproject() ++
   depend.scalaz() ++
   depend.shapeless() ++ Seq(
-    "au.com.cba.omnia" %% "permafrost" % "0.0.1-20141016001049-b0140e3" % "test",
-    "au.com.cba.omnia" %% "permafrost" % "0.0.1-20141016001049-b0140e3" % "test" classifier "tests"
+    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141102230603-b90058b" % "test",
+    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141102230603-b90058b" % "test" classifier "tests"
   )
 
 uniform.docSettings("https://github.com/CommBank/edge")
