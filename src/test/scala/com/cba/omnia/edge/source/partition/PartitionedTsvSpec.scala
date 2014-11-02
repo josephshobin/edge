@@ -44,7 +44,7 @@ PartitionedTsv
   } yield all.flatten
 
   def write =  new JobSpec {
-    IterablePipe(data, flowDef, mode)
+    IterablePipe(data)
       .write(PartitionedTsv[Int, (String, Int)](testid, "%s"))
   } must runWith {
     val groups = data.groupBy({ case (k, v) => k })

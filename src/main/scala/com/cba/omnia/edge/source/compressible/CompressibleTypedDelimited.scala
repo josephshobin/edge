@@ -20,13 +20,13 @@ import cascading.scheme.Scheme
 import cascading.scheme.hadoop.{TextLine, TextDelimited}
 import cascading.tuple.Fields
 
-import com.twitter.scalding.{TypedSeperatedFile, TypedDelimited, TupleConverter, TupleSetter}
+import com.twitter.scalding._
 
 // with thanks to https://github.com/morazow/WordCount-Compressed
 
 /** A trait for defining compressible typed delimited source factories */
 trait CompressibleTypedSeparatedFile extends TypedSeperatedFile {
-  override def apply[T : Manifest : TupleConverter : TupleSetter](paths: Seq[String], f: Fields): TypedDelimited[T] =
+  override def apply[T : Manifest : TupleConverter : TupleSetter](paths: Seq[String], f: Fields): FixedPathTypedDelimited[T] =
     new CompressibleTypedDelimited[T](paths, f, skipHeader, writeHeader, separator)
 }
 
@@ -60,7 +60,7 @@ class CompressibleTypedDelimited[T](p: Seq[String],
   implicit mf: Manifest[T],
   conv: TupleConverter[T],
   tset: TupleSetter[T]
-) extends TypedDelimited[T](p, fields, skipHeader, writeHeader, separator)(mf, conv, tset) {
+) extends FixedPathTypedDelimited[T](p, fields, skipHeader, writeHeader, separator)(mf, conv, tset) {
   override def hdfsScheme = {
     val tmp = new TextDelimited(
       fields, TextLine.Compress.DEFAULT, skipHeader, writeHeader,

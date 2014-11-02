@@ -79,6 +79,6 @@ CompressibleTypedDelimited
 class CopyJob(args: Args) extends Job(args) {
   val dest = args("dest")
   val data = List(("Foo", 1), ("Bar", 2))
-  IterablePipe[(String, Int)](data, flowDef, mode)
+  IterablePipe[(String, Int)](data)
     .write(CompressibleTypedPsv[(String, Int)](dest))
 }

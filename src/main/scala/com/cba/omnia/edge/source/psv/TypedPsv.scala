@@ -15,22 +15,26 @@
 package com.cba.omnia.edge
 package source.psv
 
-import com.twitter.scalding._
+import com.twitter.scalding.{TypedPsv => STypedPsv, _}
 
 import cascading.tuple.Fields
 
 object TypedPsv {
-  def apply[T : Manifest : TupleConverter](paths: Seq[String]): TypedDelimited[T] = {
+  @deprecated("Use TypedPsv in Scalding directly")
+  def apply[T : Manifest : TupleConverter : TupleSetter](paths: Seq[String]): FixedPathTypedDelimited[T] = {
     val f = Dsl.intFields(0 until implicitly[TupleConverter[T]].arity)
     apply[T](paths, f)
   }
 
-  def apply[T : Manifest : TupleConverter](path: String): TypedDelimited[T] =
+  @deprecated("Use TypedPsv in Scalding directly")
+  def apply[T : Manifest : TupleConverter : TupleSetter](path: String): FixedPathTypedDelimited[T] =
     apply[T](Seq(path))
 
-  def apply[T : Manifest : TupleConverter](path: String, f: Fields): TypedDelimited[T] =
+  @deprecated("Use TypedPsv in Scalding directly")
+  def apply[T : Manifest : TupleConverter : TupleSetter](path: String, f: Fields): FixedPathTypedDelimited[T] =
     apply[T](Seq(path), f)
 
-  def apply[T : Manifest : TupleConverter](paths: Seq[String], f: Fields): TypedDelimited[T] =
-    new TypedDelimited[T](paths, f, false, false, "|")
+  @deprecated("Use TypedPsv in Scalding directly")
+  def apply[T : Manifest : TupleConverter : TupleSetter](paths: Seq[String], f: Fields): FixedPathTypedDelimited[T] =
+    STypedPsv[T](paths, f)
 }
