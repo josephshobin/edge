@@ -1,4 +1,4 @@
 name: edge
 exclude: [Gemfile]
 markdown: kramdown
-releaseVersion:  "3.0.0-20141019225737-aa7f9aa"
+releaseVersion:  "3.1.0-20141102235054-95794f6"

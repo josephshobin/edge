@@ -47,7 +47,7 @@
 )
 IterablePipe(data, flowDef, mode)
   .write(PartitionedDelimited[(<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>)](args(<span class="lit">"out"</span>), <span class="lit">"col1=%s/col2=%s"</span>))</pre><p>For reading it produces a pair <code>(P, T</code> where <code>P</code> is the partition data and <code>T</code> is data in the
-files. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>))] = PartitionedDelimited[(<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>)](args(<span class="lit">"in"</span>), <span class="lit">"col1=%s/col2=%s"</span>)</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/aa7f9aa45319f208d90284aa9d61e14c1b7511db//src/main/scala/com/cba/omnia/edge/source/partition/PartitionedDelimitedSource.scala" target="_blank">PartitionedDelimitedSource.scala</a></dd></dl><div class="toggleContainer block">
+files. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>))] = PartitionedDelimited[(<span class="std">String</span>, <span class="std">String</span>), (<span class="std">String</span>, <span class="std">Int</span>)](args(<span class="lit">"in"</span>), <span class="lit">"col1=%s/col2=%s"</span>)</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/95794f64e9684aaf355411858fc2a373a1e72235//src/main/scala/com/cba/omnia/edge/source/partition/PartitionedDelimitedSource.scala" target="_blank">PartitionedDelimitedSource.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a>[<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>], <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)], <span class="extype" name="com.twitter.scalding.SchemedSource">SchemedSource</span>, <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -174,6 +174,19 @@ files. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.twitter.scalding.typed.TypedSource#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="andThen[U](fn:T=&gt;U):com.twitter.scalding.typed.TypedSource[U]"></a>
+      <a id="andThen[U](((P,T))⇒U):TypedSource[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="fn">fn: ((<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)) ⇒ <span class="extype" name="com.twitter.scalding.typed.TypedSource.andThen.U">U</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[<span class="extype" name="com.twitter.scalding.typed.TypedSource.andThen.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -219,6 +232,19 @@ files. Below is an example.</p><pre><span class="kw">val</span> in: TypedPipe[((
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.twitter.scalding.typed.TypedSink#contraMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="contraMap[U](fn:U=&gt;T):com.twitter.scalding.typed.TypedSink[U]"></a>
+      <a id="contraMap[U]((U)⇒(P,T)):TypedSink[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contraMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="fn">fn: (<span class="extype" name="com.twitter.scalding.typed.TypedSink.contraMap.U">U</span>) ⇒ (<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.typed.TypedSink">TypedSink</span>[<span class="extype" name="com.twitter.scalding.typed.TypedSink.contraMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSink</dd></dl></div>
     </li><li name="com.cba.omnia.edge.source.partition.PartitionSchemed#converter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter[U&gt;:(P,T)]:com.twitter.scalding.TupleConverter[U]"></a>
       <a id="converter[U&gt;:(P,T)]:TupleConverter[U]"></a>
@@ -579,6 +605,19 @@ into a pair of <code>P</code> and <code>T</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
+    </li><li name="com.twitter.scalding.Source#sourceId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sourceId:String"></a>
+      <a id="sourceId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sourceId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
     </li><li name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource#strict" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="strict:Boolean"></a>
       <a id="strict:Boolean"></a>
@@ -619,15 +658,15 @@ into a pair of <code>P</code> and <code>T</code>.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource">PartitionedDelimitedSource</a> → <a href="PartitionSchemed.html" class="extype" name="com.cba.omnia.edge.source.partition.PartitionSchemed">PartitionSchemed</a></dd></dl></div>
     </li><li name="com.twitter.scalding.Mappable#toIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toIterator(implicitmode:com.twitter.scalding.Mode):Iterator[T]"></a>
-      <a id="toIterator(Mode):Iterator[(P,T)]"></a>
+      <a id="toIterator(implicitconfig:com.twitter.scalding.Config,implicitmode:com.twitter.scalding.Mode):Iterator[T]"></a>
+      <a id="toIterator(Config,Mode):Iterator[(P,T)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</span>
+        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="config">config: <span class="extype" name="com.twitter.scalding.Config">Config</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.P">P</span>, <span class="extype" name="com.cba.omnia.edge.source.partition.PartitionedDelimitedSource.T">T</span>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>

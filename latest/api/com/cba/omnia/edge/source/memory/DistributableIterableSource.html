@@ -43,7 +43,7 @@
 but we can distribute the contents across a fixed number of mappers.
 This is useful for explosive map jobs that use small inputs to
 produce largs outputs.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/aa7f9aa45319f208d90284aa9d61e14c1b7511db//src/main/scala/com/cba/omnia/edge/source/memory/DistributableIterableSource.scala" target="_blank">DistributableIterableSource.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/edge/tree/95794f64e9684aaf355411858fc2a373a1e72235//src/main/scala/com/cba/omnia/edge/source/memory/DistributableIterableSource.scala" target="_blank">DistributableIterableSource.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="com.twitter.scalding.Mappable">Mappable</span>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>], <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>], <span class="extype" name="com.twitter.scalding.Source">Source</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -170,6 +170,19 @@ produce largs outputs.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.twitter.scalding.typed.TypedSource#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="andThen[U](fn:T=&gt;U):com.twitter.scalding.typed.TypedSource[U]"></a>
+      <a id="andThen[U]((T)⇒U):TypedSource[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="fn">fn: (<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>) ⇒ <span class="extype" name="com.twitter.scalding.typed.TypedSource.andThen.U">U</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.typed.TypedSource">TypedSource</span>[<span class="extype" name="com.twitter.scalding.typed.TypedSource.andThen.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -481,6 +494,19 @@ produce largs outputs.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TypedSource</dd></dl></div>
+    </li><li name="com.twitter.scalding.Source#sourceId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sourceId:String"></a>
+      <a id="sourceId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sourceId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Source</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -508,15 +534,15 @@ produce largs outputs.
       </h4>
       
     </li><li name="com.twitter.scalding.Mappable#toIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toIterator(implicitmode:com.twitter.scalding.Mode):Iterator[T]"></a>
-      <a id="toIterator(Mode):Iterator[T]"></a>
+      <a id="toIterator(implicitconfig:com.twitter.scalding.Config,implicitmode:com.twitter.scalding.Mode):Iterator[T]"></a>
+      <a id="toIterator(Config,Mode):Iterator[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>]</span>
+        <span class="name">toIterator</span><span class="params">(<span class="implicit">implicit </span><span name="config">config: <span class="extype" name="com.twitter.scalding.Config">Config</span></span>, <span name="mode">mode: <span class="extype" name="com.twitter.scalding.Mode">Mode</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.cba.omnia.edge.source.memory.DistributableIterableSource.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Mappable</dd></dl></div>
