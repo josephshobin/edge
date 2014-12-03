@@ -20,8 +20,8 @@ libraryDependencies :=
   depend.scaldingproject() ++
   depend.scalaz() ++
   depend.shapeless() ++ Seq(
-    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141102230603-b90058b" % "test",
-    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141102230603-b90058b" % "test" classifier "tests"
+    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141203052129-fbfcb09" % "test",
+    "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141203052129-fbfcb09" % "test" classifier "tests"
   )
 
 updateOptions := updateOptions.value.withCachedResolution(true)
