@@ -24,6 +24,8 @@ libraryDependencies :=
     "au.com.cba.omnia" %% "permafrost" % "0.1.0-20141102230603-b90058b" % "test" classifier "tests"
   )
 
+updateOptions := updateOptions.value.withCachedResolution(true)
+
 uniform.docSettings("https://github.com/CommBank/edge")
 
 uniform.ghsettings
