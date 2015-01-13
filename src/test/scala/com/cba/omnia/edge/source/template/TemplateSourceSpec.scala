@@ -21,16 +21,12 @@ import scalaz._, Scalaz._
 
 import org.apache.hadoop.fs.Path
 
-import org.specs2._
-import org.specs2.execute._
-import org.specs2.matcher._
-
 import au.com.cba.omnia.permafrost.hdfs.Hdfs
 
 import com.cba.omnia.edge.source.memory._
+import com.cba.omnia.edge.test.ScaldingSpec
 
-
-class TemplateSourceSpec extends test.ScaldingSpec { def is = s2"""
+class TemplateSourceSpec extends ScaldingSpec { def is = s2"""
 Template Source
 ===============
 Template Delimited:

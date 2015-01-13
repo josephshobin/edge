@@ -16,15 +16,11 @@ package com.cba.omnia.edge
 package source.template
 
 
-import cascading.tap.SinkMode
-import cascading.tap.Tap
-import cascading.tap.hadoop.TemplateTap
-import cascading.tap.hadoop.Hfs
-import cascading.tuple.Tuple
-import cascading.tuple.Fields
+import cascading.tap.{SinkMode, Tap}
+import cascading.tap.hadoop.{Hfs, TemplateTap}
+import cascading.tuple.{Fields, Tuple}
 
 import com.twitter.scalding._
-import com.twitter.scalding.typed._
 
 /**
  * This is a primitive trait to mixin in to enable cascading's TemplateTap.
