@@ -16,12 +16,14 @@ uniform.project("edge", "au.com.cba.omnia.edge")
 
 uniformDependencySettings
 
+strictDependencySettings
+
 libraryDependencies :=
   depend.scaldingproject() ++
   depend.scalaz() ++
   depend.shapeless() ++ Seq(
-    "au.com.cba.omnia" %% "permafrost" % "0.3.0-20150211061038-14b5ef7-CDH5" % "test",
-    "au.com.cba.omnia" %% "permafrost" % "0.3.0-20150211061038-14b5ef7-CDH5" % "test" classifier "tests"
+    "au.com.cba.omnia" %% "permafrost" % "0.3.0-20150304005625-1637a86" % "test",
+    "au.com.cba.omnia" %% "permafrost" % "0.3.0-20150304005625-1637a86" % "test" classifier "tests"
   )
 
 updateOptions := updateOptions.value.withCachedResolution(true)
